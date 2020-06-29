@@ -249,6 +249,636 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/29/Zerojudge%20c575/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Koios1143">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/rinko.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Koios1143的筆記">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/29/Zerojudge%20c575/" itemprop="url">Zerojudge c575</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-06-29T19:09:24+08:00">
+                2020-06-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Zerojudge/" itemprop="url" rel="index">
+                    <span itemprop="name">Zerojudge</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index">
+                    <span itemprop="name">APCS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Zerojudge-c575"><a href="#Zerojudge-c575" class="headerlink" title="Zerojudge c575"></a>Zerojudge c575</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=c575" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=c575</a><br>一個一維座標上有 $n$ 個點 $p$，在座標上最多放置 $k$ 個基地台<br>每個基地台可以隨意放在座標點上任一點(不限於整數座標)，若點包含於某基地台的半徑 $r$ 內則可接收到訊號<br>求基地台的最小直徑，使得所有標記的點都能接收到訊號</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>點可以說幾乎無限多個，顯然暴力去找基地台可以放在哪裡是不合理的<br>但是我們知道基地台可以隨便放，也知道需要包含在那些座標點上<br>我們可以先將所有座標點由小到大排序<br>很快可以知道基地台最大直徑為$p_n-p_1$，最小為1(一個點座標長度)<br>二分搜基地台的直徑 $R$ ，每次檢查 $R$ 是否符合</p>
+<p>至於要如何檢查呢?<br>我們可以從 $p_1$ 開始，每次加上本次枚舉的直徑，將包含在直徑內的點都移除，並每次紀錄使用基地台數量<br>當基地台數量超過 $k$ 就不符合</p>
+<h3 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h3><p>其實可以發現，基地台直徑最大為 $(p_n-p_1)/k$</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pii pair<span class="meta-string">&lt;int,int&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> n,k,base[<span class="number">50005</span>];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ok</span><span class="params">(<span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> numbers=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,now=base[<span class="number">0</span>]+len ; i&lt;n &amp;&amp; numbers&lt;=k+<span class="number">1</span> ; )&#123;</span><br><span class="line">		now=base[i]+len;</span><br><span class="line">		numbers++;</span><br><span class="line">		<span class="keyword">while</span>(i&lt;n &amp;&amp; base[i]&lt;=now)</span><br><span class="line">			i++;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(numbers&lt;=k)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	IOS</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;k;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;n ; i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;base[i];</span><br><span class="line">	&#125;</span><br><span class="line">	sort(base,base+n);</span><br><span class="line">	<span class="keyword">int</span> low=<span class="number">1</span>,high=(base[n<span class="number">-1</span>]-base[<span class="number">0</span>])/k+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(low&lt;high)&#123;</span><br><span class="line">		<span class="keyword">int</span> mid=(low+high)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(ok(mid))</span><br><span class="line">			high=mid;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			low=mid+<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;low&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="複雜度"><a href="#複雜度" class="headerlink" title="複雜度"></a>複雜度</h2><p>二分搜時間複雜度為 $O(log(high-low))$<br>本題 $high-low$ 最大不超過 $10^6$</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/29/Zerojudge%20c292/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Koios1143">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/rinko.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Koios1143的筆記">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/29/Zerojudge%20c292/" itemprop="url">Zerojudge c292</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-06-29T18:25:24+08:00">
+                2020-06-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Zerojudge/" itemprop="url" rel="index">
+                    <span itemprop="name">Zerojudge</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index">
+                    <span itemprop="name">APCS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Zerojudge-c292"><a href="#Zerojudge-c292" class="headerlink" title="Zerojudge c292"></a>Zerojudge c292</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=c292" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=c292</a><br>給一個二維正方形陣列，邊長為奇數，求從中心點開始向指定方向開始走(上/下/左/右)，繞圈走過的元素依照走訪順序輸出</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>模擬一遍即可<br>我的作法是記錄現在走訪到哪裡，接下來要往哪個方向走多少距離<br>將走過點的值儲存到一個陣列中<br>需要留意在最後一次走訪時前進距離會少1</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pii pair<span class="meta-string">&lt;int,int&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,st,arr[<span class="number">50</span>][<span class="number">50</span>];</span><br><span class="line"><span class="keyword">int</span> row=<span class="number">1</span>,col=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> last=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">string</span> ans;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> face)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(col+row == <span class="number">2</span>*n+<span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">if</span>(st%<span class="number">2</span>==<span class="number">0</span> &amp;&amp; col+row==<span class="number">2</span>*n)</span><br><span class="line">		last=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(st%<span class="number">2</span>==<span class="number">1</span> &amp;&amp; col+row==<span class="number">2</span>*n)</span><br><span class="line">		last=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(face==<span class="number">0</span>)&#123;</span><br><span class="line">		<span class="comment">//left</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span> ; i&lt;=col-last ; i++)&#123;</span><br><span class="line">			ans+=(<span class="keyword">char</span>)(<span class="string">'0'</span>+arr[x][y-i]);</span><br><span class="line">		&#125;</span><br><span class="line">		col++;</span><br><span class="line">		solve(x,y-(col<span class="number">-1</span>),<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(face==<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="comment">//up</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span> ; i&lt;=row-last ; i++)&#123;</span><br><span class="line">			ans+=(<span class="keyword">char</span>)(<span class="string">'0'</span>+arr[x-i][y]);</span><br><span class="line">		&#125;</span><br><span class="line">		row++;</span><br><span class="line">		solve(x-(row<span class="number">-1</span>),y,<span class="number">2</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(face==<span class="number">2</span>)&#123;</span><br><span class="line">		<span class="comment">//right</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span> ; i&lt;=col-last ; i++)&#123;</span><br><span class="line">			ans+=(<span class="keyword">char</span>)(<span class="string">'0'</span>+arr[x][y+i]);</span><br><span class="line">		&#125;</span><br><span class="line">		col++;</span><br><span class="line">		solve(x,y+(col<span class="number">-1</span>),<span class="number">3</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(face==<span class="number">3</span>)&#123;</span><br><span class="line">		<span class="comment">//down</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span> ; i&lt;=row-last ; i++)&#123;</span><br><span class="line">			ans+=(<span class="keyword">char</span>)(<span class="string">'0'</span>+arr[x+i][y]);</span><br><span class="line">		&#125;</span><br><span class="line">		row++;</span><br><span class="line">		solve(x+(row<span class="number">-1</span>),y,<span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	IOS</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;st;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;n ; i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span> ; j&lt;n ; j++)</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;arr[i][j];</span><br><span class="line">	ans+=(<span class="keyword">char</span>)(<span class="string">'0'</span>+arr[n/<span class="number">2</span>][n/<span class="number">2</span>]);</span><br><span class="line">	solve(n/<span class="number">2</span>,n/<span class="number">2</span>,st);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="string">'\n'</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="複雜度"><a href="#複雜度" class="headerlink" title="複雜度"></a>複雜度</h2><p>每個點走訪一遍，每個點走訪時間複雜度為 $O(1)$<br>總複雜度 $O(n^2)$</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/29/Zerojudge%20c291/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Koios1143">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/rinko.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Koios1143的筆記">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/29/Zerojudge%20c291/" itemprop="url">Zerojudge c291</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-06-29T18:01:24+08:00">
+                2020-06-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Zerojudge/" itemprop="url" rel="index">
+                    <span itemprop="name">Zerojudge</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index">
+                    <span itemprop="name">APCS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Zerojudge-c291"><a href="#Zerojudge-c291" class="headerlink" title="Zerojudge c291"></a>Zerojudge c291</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=c291" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=c291</a><br>給每個人跟誰屬於同一個群體，求總群體個數</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>將所有人的關係建成圖，DFS每個點即可</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pii pair<span class="meta-string">&lt;int,int&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,ans=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; Next[<span class="number">50005</span>];</span><br><span class="line"><span class="keyword">bool</span> vis[<span class="number">50005</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> px)</span></span>&#123;</span><br><span class="line">	vis[px]=<span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">bool</span> end=<span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> i: Next[px])&#123;</span><br><span class="line">		<span class="keyword">if</span>(!vis[i])&#123;</span><br><span class="line">			dfs(i);</span><br><span class="line">			end=<span class="literal">false</span>;</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(end)</span><br><span class="line">		ans++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	IOS</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,tmp ; i&lt;n ; i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;tmp;</span><br><span class="line">		Next[i].push_back(tmp);</span><br><span class="line">		Next[tmp].push_back(i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;n ; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(!vis[i])&#123;</span><br><span class="line">			dfs(i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="string">'\n'</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="複雜度"><a href="#複雜度" class="headerlink" title="複雜度"></a>複雜度</h2><p>DFS複雜度為 $O(n)$<br>總複雜度 $O(n)$</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/29/Zerojudge%20c290/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Koios1143">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/rinko.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Koios1143的筆記">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/29/Zerojudge%20c290/" itemprop="url">Zerojudge c290</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-06-29T17:50:24+08:00">
+                2020-06-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Zerojudge/" itemprop="url" rel="index">
+                    <span itemprop="name">Zerojudge</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index">
+                    <span itemprop="name">APCS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Zerojudge-c290"><a href="#Zerojudge-c290" class="headerlink" title="Zerojudge c290"></a>Zerojudge c290</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=c290" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=c290</a><br>給一個10位數，不超過1000位數，求奇數和與偶數位數合之差的絕對值</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>數字用字串儲存，接下來將奇數位數與偶數位數算出來即可</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pii pair<span class="meta-string">&lt;int,int&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"><span class="keyword">int</span> a=<span class="number">0</span>,b=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	IOS</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line">	<span class="keyword">bool</span> A=<span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=s.size()<span class="number">-1</span> ; i&gt;=<span class="number">0</span> ; i--)&#123;</span><br><span class="line">		<span class="keyword">if</span>(A)</span><br><span class="line">			a+=(s[i]-<span class="string">'0'</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			b+=(s[i]-<span class="string">'0'</span>);</span><br><span class="line">		A=!A;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">abs</span>(a-b)&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="複雜度"><a href="#複雜度" class="headerlink" title="複雜度"></a>複雜度</h2><p>$O(len(s))$</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/29/Zerojudge%20e289/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1191,651 +1821,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/28/Zerojudge%20c462/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Koios1143">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/rinko.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Koios1143的筆記">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/28/Zerojudge%20c462/" itemprop="url">Zerojudge c462</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-06-28T11:28:24+08:00">
-                2020-06-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Zerojudge/" itemprop="url" rel="index">
-                    <span itemprop="name">Zerojudge</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index">
-                    <span itemprop="name">APCS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Zerojudge-c462"><a href="#Zerojudge-c462" class="headerlink" title="Zerojudge c462"></a>Zerojudge c462</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=c462" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=c462</a><br>定義長度為 $k$ 的大寫字串與長度為 $k$ 的小寫字串串接而成的字串稱為 <code>k-交錯字串</code><br>給一個字串與 $k$ ，求最長的 <code>k-交錯字串</code> 長度</p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>用一個陣列去記錄長度，分成幾種狀況討論</p>
-<ol>
-<li>$s[i]$ 和 $s[i-1]$ 同為大寫或小寫<ol>
-<li>本輪循環長度已經超過 $k$<br> 表示循環已經被破壞，並從長度 $k$ 開始重新運算</li>
-<li>本輪循環長度小於 $k$<br> 循環長度為上一層+1</li>
-</ol>
-</li>
-<li>$s[i]$ 和 $s[i-1]$ 不同為大寫或小寫<ol>
-<li>上一個循環長度為 $k$ 的倍數<br> 表示上一個有完成 $k$ 個循環，可以繼續增長循環</li>
-<li>上一個循環長度不為 $k$ 的倍數<br> 表示上一個沒有完成 $k$ 個循環，不能繼續增長循環，從1開始計算</li>
-</ol>
-</li>
-</ol>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pii pair<span class="meta-string">&lt;int,int&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,arr[<span class="number">1000000</span>];</span><br><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">is_lower</span><span class="params">(<span class="keyword">char</span> c)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (c&gt;=<span class="string">'a'</span> &amp;&amp; c&lt;=<span class="string">'z'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">is_higher</span><span class="params">(<span class="keyword">char</span> c)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (c&gt;=<span class="string">'A'</span> &amp;&amp; c&lt;=<span class="string">'Z'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">same</span><span class="params">(<span class="keyword">char</span> a,<span class="keyword">char</span> b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (is_lower(a) &amp;&amp; is_lower(b)) || (is_higher(a) &amp;&amp; is_higher(b));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	IOS</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line">		<span class="keyword">int</span> lower=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> higher=<span class="number">0</span>;</span><br><span class="line">		arr[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">int</span> times=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span> ; i&lt;s.size() ; i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(!same(s[i],s[i<span class="number">-1</span>]))&#123;</span><br><span class="line">				<span class="keyword">if</span>(arr[i<span class="number">-1</span>]%n!=<span class="number">0</span>)&#123;</span><br><span class="line">					arr[i]=<span class="number">1</span>;</span><br><span class="line">					times=<span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span>&#123;</span><br><span class="line">					arr[i]=arr[i<span class="number">-1</span>]+<span class="number">1</span>;</span><br><span class="line">					times++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span>&#123;</span><br><span class="line">				<span class="keyword">if</span>(arr[i<span class="number">-1</span>] &gt;= n*times)&#123;</span><br><span class="line">					arr[i]=n;</span><br><span class="line">					times=<span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">					arr[i]=arr[i<span class="number">-1</span>]+<span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;s.size() ; i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(arr[i]%n==<span class="number">0</span>)</span><br><span class="line">				ans=max(ans,arr[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="複雜度"><a href="#複雜度" class="headerlink" title="複雜度"></a>複雜度</h2><p>$O(len(s))$</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/28/Zerojudge%20c461/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Koios1143">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/rinko.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Koios1143的筆記">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/28/Zerojudge%20c461/" itemprop="url">Zerojudge c461</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-06-28T11:03:24+08:00">
-                2020-06-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Zerojudge/" itemprop="url" rel="index">
-                    <span itemprop="name">Zerojudge</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index">
-                    <span itemprop="name">APCS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Zerojudge-c461"><a href="#Zerojudge-c461" class="headerlink" title="Zerojudge c461"></a>Zerojudge c461</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=c461" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=c461</a><br>給三個數值，問經過 <code>AND</code> <code>OR</code> <code>XOR</code> 之後的值是否與要求相同</p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>直接照著題目做下去即可</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pii pair<span class="meta-string">&lt;int,int&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">bool</span> c;</span><br><span class="line"><span class="keyword">int</span> A,B;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	IOS</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;A&gt;&gt;B&gt;&gt;c)&#123;</span><br><span class="line">		<span class="keyword">bool</span> a=(A&gt;<span class="number">0</span>) ? <span class="literal">true</span> : <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">bool</span> b=(B&gt;<span class="number">0</span>) ? <span class="literal">true</span> : <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">bool</span> out=<span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">if</span>((a &amp;&amp; b) == c)&#123;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">"AND\n"</span>;</span><br><span class="line">			out=<span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>((a || b) == c)&#123;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">"OR\n"</span>;</span><br><span class="line">			out=<span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>((a ^ b) == c)&#123;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">"XOR\n"</span>;</span><br><span class="line">			out=<span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(!out)</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">"IMPOSSIBLE\n"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="複雜度"><a href="#複雜度" class="headerlink" title="複雜度"></a>複雜度</h2><p>$O(1)$</p>
-<h6 id="tags-Zerojudge"><a href="#tags-Zerojudge" class="headerlink" title="tags: Zerojudge"></a>tags: <code>Zerojudge</code></h6>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/27/Zerojudge%20b967/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Koios1143">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/rinko.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Koios1143的筆記">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/27/Zerojudge%20b967/" itemprop="url">Zerojudge b967</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-06-27T22:27:24+08:00">
-                2020-06-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Zerojudge/" itemprop="url" rel="index">
-                    <span itemprop="name">Zerojudge</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index">
-                    <span itemprop="name">APCS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Zerojudge-b967"><a href="#Zerojudge-b967" class="headerlink" title="Zerojudge b967"></a>Zerojudge b967</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=b967" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=b967</a><br>相當於求樹直徑</p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>可以證明透過兩次DFS即可求解<br>證明過程可參閱 <a href="https://www.itread01.com/content/1549861926.html" target="_blank" rel="noopener">https://www.itread01.com/content/1549861926.html</a></p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pii pair<span class="meta-string">&lt;int,int&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line">pii far;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v[<span class="number">100005</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> now,<span class="keyword">int</span> last,<span class="keyword">int</span> depth)</span></span>&#123;</span><br><span class="line">	far = max(far,&#123;depth,now&#125;);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> i: v[now])&#123;</span><br><span class="line">		<span class="keyword">if</span>(i==last)</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		dfs(i,now,depth+<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	IOS</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;n ; i++)&#123;</span><br><span class="line">			v[i].clear();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,a,b ; i&lt;n<span class="number">-1</span> ; i++)&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">			v[a].push_back(b);</span><br><span class="line">			v[b].push_back(a);</span><br><span class="line">		&#125;</span><br><span class="line">		far = &#123;<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line">		dfs(<span class="number">0</span>,<span class="number">-1</span>,<span class="number">0</span>);</span><br><span class="line">		dfs(far.second,<span class="number">-1</span>,<span class="number">0</span>);</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;far.first&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="複雜度"><a href="#複雜度" class="headerlink" title="複雜度"></a>複雜度</h2><p>DFS複雜度為 $O(n)$<br>總複雜度 $O(n)$</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/27/Zerojudge%20b966/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Koios1143">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/rinko.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Koios1143的筆記">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/27/Zerojudge%20b966/" itemprop="url">Zerojudge b966</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-06-27T21:01:24+08:00">
-                2020-06-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Zerojudge/" itemprop="url" rel="index">
-                    <span itemprop="name">Zerojudge</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index">
-                    <span itemprop="name">APCS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Zerojudge-b966"><a href="#Zerojudge-b966" class="headerlink" title="Zerojudge b966"></a>Zerojudge b966</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=b966" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=b966</a><br>給定多個線段，求所有線段除去覆蓋部分的長度總和</p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>將所有線段排序後將完全覆蓋的線段除去<br>接下來的線段只需討論是否有重疊部分，若有，則將線段界線更新</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pii pair<span class="meta-string">&lt;int,int&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="built_in">vector</span>&lt;pii&gt; v,res;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	IOS</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,l,r ; i&lt;n ; i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;l&gt;&gt;r;</span><br><span class="line">		v.emplace_back(l,r);</span><br><span class="line">	&#125;</span><br><span class="line">	sort(v.begin(),v.end());</span><br><span class="line">	<span class="keyword">int</span> Max=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> i: v)&#123;</span><br><span class="line">		<span class="keyword">if</span>(i.second&gt;Max)&#123;</span><br><span class="line">			res.push_back(i);</span><br><span class="line">			Max=i.second;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;res.size()<span class="number">-1</span> ; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(res[i].second&gt;=res[i+<span class="number">1</span>].first)&#123;</span><br><span class="line">			res[i+<span class="number">1</span>].first=res[i].first;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			ans+=res[i].second-res[i].first;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	ans+=res[res.size()<span class="number">-1</span>].second-res[res.size()<span class="number">-1</span>].first;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="複雜度"><a href="#複雜度" class="headerlink" title="複雜度"></a>複雜度</h2><p>排序複雜度 $O(nlogn)$<br>搜尋答案複雜度 $O(n)$<br>總複雜度 $O(n+nlogn)$</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
   </nav>
 
 
@@ -1885,7 +1875,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
