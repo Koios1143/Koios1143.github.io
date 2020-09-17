@@ -28,7 +28,7 @@
 <meta property="og:description" content="Zerojudge a017題敘https:&#x2F;&#x2F;zerojudge.tw&#x2F;ShowProblem?problemid&#x3D;a017給定一個中序運算式，包含 + - * &#x2F; % ，求運算結果 想法對於中序運算在想法上比較不容易思考，改成後序運算會更佳因此我先將給定運算式轉成後序運算式，再進行運算">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-09-11T13:49:24.000Z">
-<meta property="article:modified_time" content="2020-09-17T13:24:39.541Z">
+<meta property="article:modified_time" content="2020-09-17T13:28:24.397Z">
 <meta property="article:author" content="Koios1143">
 <meta property="article:tag" content="資料結構">
 <meta property="article:tag" content="Zerojudge">
@@ -189,7 +189,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-09-17 21:24:39" itemprop="dateModified" datetime="2020-09-17T21:24:39+08:00">2020-09-17</time>
+                <time title="修改時間：2020-09-17 21:28:24" itemprop="dateModified" datetime="2020-09-17T21:28:24+08:00">2020-09-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -221,7 +221,7 @@
       
         <h1 id="Zerojudge-a017"><a href="#Zerojudge-a017" class="headerlink" title="Zerojudge a017"></a>Zerojudge a017</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=a017" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=a017</a><br>給定一個中序運算式，包含 <code>+</code> <code>-</code> <code>*</code> <code>/</code> <code>%</code> ，求運算結果</p>
 <h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>對於中序運算在想法上比較不容易思考，改成後序運算會更佳<br>因此我先將給定運算式轉成後序運算式，再進行運算</p>
-<p>簡單介紹一下前、中、後序運算<br>例如在中序運算式是 $1 + ( 2 + 3 * 5 ) % 2$</p>
+<p>簡單介紹一下前、中、後序運算<br>例如在中序運算式是 <code>1 + ( 2 + 3 * 5 ) % 2</code></p>
 <h3 id="前序"><a href="#前序" class="headerlink" title="前序"></a>前序</h3><p>前序運算會將上述的運算式改成 <code>+ 1 % + 2 * 3 5 2</code><br>從右邊看回來</p>
 <ol>
 <li>$+ 1 % + 2 15 2$</li>
