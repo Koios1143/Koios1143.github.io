@@ -28,7 +28,7 @@
 <meta property="og:description" content="Zerojudge a017題敘https:&#x2F;&#x2F;zerojudge.tw&#x2F;ShowProblem?problemid&#x3D;a017給定一個中序運算式，包含 + - * &#x2F; % ，求運算結果 想法對於中序運算在想法上比較不容易思考，改成後序運算會更佳因此我先將給定運算式轉成後序運算式，再進行運算">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-09-11T13:49:24.000Z">
-<meta property="article:modified_time" content="2020-09-17T13:28:24.397Z">
+<meta property="article:modified_time" content="2020-09-17T13:30:37.950Z">
 <meta property="article:author" content="Koios1143">
 <meta property="article:tag" content="資料結構">
 <meta property="article:tag" content="Zerojudge">
@@ -189,7 +189,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-09-17 21:28:24" itemprop="dateModified" datetime="2020-09-17T21:28:24+08:00">2020-09-17</time>
+                <time title="修改時間：2020-09-17 21:30:37" itemprop="dateModified" datetime="2020-09-17T21:30:37+08:00">2020-09-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -224,24 +224,24 @@
 <p>簡單介紹一下前、中、後序運算<br>例如在中序運算式是 <code>1 + ( 2 + 3 * 5 ) % 2</code></p>
 <h3 id="前序"><a href="#前序" class="headerlink" title="前序"></a>前序</h3><p>前序運算會將上述的運算式改成 <code>+ 1 % + 2 * 3 5 2</code><br>從右邊看回來</p>
 <ol>
-<li>$+ 1 % + 2 15 2$</li>
-<li>$+ 1 % 17 2$</li>
-<li>$+ 1 1$</li>
-<li>$2$</li>
+<li><code>+ 1 % + 2 15 2</code></li>
+<li><code>+ 1 % 17 2</code></li>
+<li><code>+ 1 1</code></li>
+<li><code>2</code></li>
 </ol>
 <h3 id="中序"><a href="#中序" class="headerlink" title="中序"></a>中序</h3><p>中序運算是由左向右看，遇到括號從內往外看，先乘除後加減<br>平常我們使用的都是中序運算</p>
 <ol>
-<li>$1 + ( 2 + 15 ) % 2$</li>
-<li>$1 + ( 17 ) % 2$</li>
-<li>$1 + 1$</li>
-<li>$2$</li>
+<li><code>1 + ( 2 + 15 ) % 2</code></li>
+<li><code>1 + ( 17 ) % 2</code></li>
+<li><code>1 + 1</code></li>
+<li><code>2</code></li>
 </ol>
 <h3 id="後序"><a href="#後序" class="headerlink" title="後序"></a>後序</h3><p>後序運算會先將上述運算式改成 <code>1 2 3 5 * + 2 % +</code><br>從左邊看過去，遇到運算子就向前取兩個運算元進行計算</p>
 <ol>
-<li>$1 2 15 + 2 % +$</li>
-<li>$1 17 2 % +$</li>
-<li>$1 1 +$</li>
-<li>$2$</li>
+<li><code>1 2 15 + 2 % +</code></li>
+<li><code>1 17 2 % +</code></li>
+<li><code>1 1 +</code></li>
+<li><code>2</code></li>
 </ol>
 <p>(也可參考此資料: <a href="https://magiclen.org/arithmetic/" target="_blank" rel="noopener">https://magiclen.org/arithmetic/</a>)</p>
 <p>後序運算會先將運算元放入，再將運算子放入<br>這邊會用一個stack儲存運算元，並用vector或queue儲存結果<br>為了達到先乘除後加減，需要對運算子的優先度進行判斷<br>轉換情況如下</p>
