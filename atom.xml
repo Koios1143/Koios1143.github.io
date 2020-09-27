@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Koios1143的筆記</title>
+  
+  
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-09-27T13:51:29.468Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Koios1143</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TOJ 474</title>
+    <link href="http://yoursite.com/2020/09/25/TOJ474/"/>
+    <id>http://yoursite.com/2020/09/25/TOJ474/</id>
+    <published>2020-09-25T07:03:04.000Z</published>
+    <updated>2020-09-27T13:51:29.468Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="TOJ" scheme="http://yoursite.com/categories/TOJ/"/>
+    
+    
+    <category term="TOJ" scheme="http://yoursite.com/tags/TOJ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TIOJ 2054</title>
+    <link href="http://yoursite.com/2020/09/25/TIOJ2054/"/>
+    <id>http://yoursite.com/2020/09/25/TIOJ2054/</id>
+    <published>2020-09-25T06:31:10.000Z</published>
+    <updated>2020-09-27T11:30:16.078Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="TIOJ" scheme="http://yoursite.com/categories/TIOJ/"/>
+    
+    
+    <category term="TIOJ" scheme="http://yoursite.com/tags/TIOJ/"/>
+    
+    <category term="slide window" scheme="http://yoursite.com/tags/slide-window/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TOJ 475</title>
+    <link href="http://yoursite.com/2020/09/25/TOJ475/"/>
+    <id>http://yoursite.com/2020/09/25/TOJ475/</id>
+    <published>2020-09-25T06:00:38.000Z</published>
+    <updated>2020-09-27T13:50:53.656Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="TOJ" scheme="http://yoursite.com/categories/TOJ/"/>
+    
+    
+    <category term="LCA" scheme="http://yoursite.com/tags/LCA/"/>
+    
+    <category term="TOJ" scheme="http://yoursite.com/tags/TOJ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>POJ 1330</title>
+    <link href="http://yoursite.com/2020/09/25/POJ1330/"/>
+    <id>http://yoursite.com/2020/09/25/POJ1330/</id>
+    <published>2020-09-25T04:13:27.000Z</published>
+    <updated>2020-09-27T08:58:31.129Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="POJ" scheme="http://yoursite.com/categories/POJ/"/>
+    
+    
+    <category term="POJ" scheme="http://yoursite.com/tags/POJ/"/>
+    
+    <category term="LCA" scheme="http://yoursite.com/tags/LCA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TIOJ 1080</title>
+    <link href="http://yoursite.com/2020/09/25/TIOJ1080/"/>
+    <id>http://yoursite.com/2020/09/25/TIOJ1080/</id>
+    <published>2020-09-25T02:22:06.000Z</published>
+    <updated>2020-09-27T11:19:11.593Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="TIOJ" scheme="http://yoursite.com/categories/TIOJ/"/>
+    
+    
+    <category term="TIOJ" scheme="http://yoursite.com/tags/TIOJ/"/>
+    
+    <category term="counting inversion" scheme="http://yoursite.com/tags/counting-inversion/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Zerojudge b542</title>
+    <link href="http://yoursite.com/2020/09/25/Zerojudge%20b542/"/>
+    <id>http://yoursite.com/2020/09/25/Zerojudge%20b542/</id>
+    <published>2020-09-25T00:40:00.000Z</published>
+    <updated>2020-09-27T13:50:34.721Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="Zerojudge" scheme="http://yoursite.com/categories/Zerojudge/"/>
+    
+    
+    <category term="Zerojudge" scheme="http://yoursite.com/tags/Zerojudge/"/>
+    
+    <category term="Slide Window" scheme="http://yoursite.com/tags/Slide-Window/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TOJ 9</title>
+    <link href="http://yoursite.com/2020/09/23/TOJ9/"/>
+    <id>http://yoursite.com/2020/09/23/TOJ9/</id>
+    <published>2020-09-23T02:46:29.000Z</published>
+    <updated>2020-09-27T11:38:22.235Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="TOJ" scheme="http://yoursite.com/categories/TOJ/"/>
+    
+    
+    <category term="DFS" scheme="http://yoursite.com/tags/DFS/"/>
+    
+    <category term="TOJ" scheme="http://yoursite.com/tags/TOJ/"/>
+    
+    <category term="BFS" scheme="http://yoursite.com/tags/BFS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TIOJ1235</title>
+    <link href="http://yoursite.com/2020/09/21/TIOJ1235/"/>
+    <id>http://yoursite.com/2020/09/21/TIOJ1235/</id>
+    <published>2020-09-21T01:26:05.000Z</published>
+    <updated>2020-09-27T13:53:39.598Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="TIOJ" scheme="http://yoursite.com/categories/TIOJ/"/>
+    
+    
+    <category term="TIOJ" scheme="http://yoursite.com/tags/TIOJ/"/>
+    
+    <category term="DFS" scheme="http://yoursite.com/tags/DFS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UVa907</title>
+    <link href="http://yoursite.com/2020/09/21/UVa907/"/>
+    <id>http://yoursite.com/2020/09/21/UVa907/</id>
+    <published>2020-09-21T01:26:05.000Z</published>
+    <updated>2020-09-27T13:53:03.661Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="UVa" scheme="http://yoursite.com/categories/UVa/"/>
+    
+    
+    <category term="UVa" scheme="http://yoursite.com/tags/UVa/"/>
+    
+    <category term="Binary Search" scheme="http://yoursite.com/tags/Binary-Search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TOJ274</title>
+    <link href="http://yoursite.com/2020/09/21/TOJ274/"/>
+    <id>http://yoursite.com/2020/09/21/TOJ274/</id>
+    <published>2020-09-21T00:44:09.000Z</published>
+    <updated>2020-09-21T13:55:21.932Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="TOJ" scheme="http://yoursite.com/categories/TOJ/"/>
+    
+    
+    <category term="TOJ" scheme="http://yoursite.com/tags/TOJ/"/>
+    
+    <category term="遞迴" scheme="http://yoursite.com/tags/%E9%81%9E%E8%BF%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UVa374</title>
+    <link href="http://yoursite.com/2020/09/21/UVa374/"/>
+    <id>http://yoursite.com/2020/09/21/UVa374/</id>
+    <published>2020-09-21T00:26:05.000Z</published>
+    <updated>2020-09-21T13:55:18.492Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="UVa" scheme="http://yoursite.com/categories/UVa/"/>
+    
+    
+    <category term="遞迴" scheme="http://yoursite.com/tags/%E9%81%9E%E8%BF%B4/"/>
+    
+    <category term="UVa" scheme="http://yoursite.com/tags/UVa/"/>
+    
+    <category term="快速冪" scheme="http://yoursite.com/tags/%E5%BF%AB%E9%80%9F%E5%86%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TOJ 565</title>
+    <link href="http://yoursite.com/2020/09/18/TOJ565/"/>
+    <id>http://yoursite.com/2020/09/18/TOJ565/</id>
+    <published>2020-09-18T13:18:03.000Z</published>
+    <updated>2020-09-27T13:51:03.334Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="TOJ" scheme="http://yoursite.com/categories/TOJ/"/>
+    
+    
+    <category term="TOJ" scheme="http://yoursite.com/tags/TOJ/"/>
+    
+    <category term="Shortest Path" scheme="http://yoursite.com/tags/Shortest-Path/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TOJ 564</title>
+    <link href="http://yoursite.com/2020/09/18/TOJ564/"/>
+    <id>http://yoursite.com/2020/09/18/TOJ564/</id>
+    <published>2020-09-18T12:31:51.000Z</published>
+    <updated>2020-09-27T12:06:35.108Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="TOJ" scheme="http://yoursite.com/categories/TOJ/"/>
+    
+    
+    <category term="TOJ" scheme="http://yoursite.com/tags/TOJ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>codeforces 543A</title>
+    <link href="http://yoursite.com/2020/09/13/codeforces%20543A/"/>
+    <id>http://yoursite.com/2020/09/13/codeforces%20543A/</id>
+    <published>2020-09-13T03:26:05.000Z</published>
+    <updated>2020-09-13T09:18:20.393Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="codeforces" scheme="http://yoursite.com/categories/codeforces/"/>
+    
+    
+    <category term="DP" scheme="http://yoursite.com/tags/DP/"/>
+    
+    <category term="codeforces" scheme="http://yoursite.com/tags/codeforces/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TOJ 169</title>
+    <link href="http://yoursite.com/2020/09/12/TOJ169/"/>
+    <id>http://yoursite.com/2020/09/12/TOJ169/</id>
+    <published>2020-09-11T18:01:05.000Z</published>
+    <updated>2020-09-12T13:02:32.487Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="TOJ" scheme="http://yoursite.com/categories/TOJ/"/>
+    
+    
+    <category term="資料結構" scheme="http://yoursite.com/tags/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/"/>
+    
+    <category term="TOJ" scheme="http://yoursite.com/tags/TOJ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>POJ 3250</title>
+    <link href="http://yoursite.com/2020/09/11/POJ3250/"/>
+    <id>http://yoursite.com/2020/09/11/POJ3250/</id>
+    <published>2020-09-11T15:09:48.000Z</published>
+    <updated>2020-09-27T08:59:18.765Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="POJ" scheme="http://yoursite.com/categories/POJ/"/>
+    
+    
+    <category term="POJ" scheme="http://yoursite.com/tags/POJ/"/>
+    
+    <category term="資料結構" scheme="http://yoursite.com/tags/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UVa673</title>
+    <link href="http://yoursite.com/2020/09/11/UVa673/"/>
+    <id>http://yoursite.com/2020/09/11/UVa673/</id>
+    <published>2020-09-11T14:35:04.000Z</published>
+    <updated>2020-09-12T12:45:14.194Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="UVa" scheme="http://yoursite.com/categories/UVa/"/>
+    
+    
+    <category term="資料結構" scheme="http://yoursite.com/tags/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/"/>
+    
+    <category term="UVa" scheme="http://yoursite.com/tags/UVa/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Zerojudge a007</title>
+    <link href="http://yoursite.com/2020/09/11/Zerojudge%20a007/"/>
+    <id>http://yoursite.com/2020/09/11/Zerojudge%20a007/</id>
+    <published>2020-09-11T13:49:24.000Z</published>
+    <updated>2020-09-27T08:46:33.477Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="Zerojudge" scheme="http://yoursite.com/categories/Zerojudge/"/>
+    
+    
+    <category term="Zerojudge" scheme="http://yoursite.com/tags/Zerojudge/"/>
+    
+    <category term="數論" scheme="http://yoursite.com/tags/%E6%95%B8%E8%AB%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Zerojudge a017</title>
+    <link href="http://yoursite.com/2020/09/11/Zerojudge%20a017/"/>
+    <id>http://yoursite.com/2020/09/11/Zerojudge%20a017/</id>
+    <published>2020-09-11T13:49:24.000Z</published>
+    <updated>2020-09-17T13:30:37.950Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="Zerojudge" scheme="http://yoursite.com/categories/Zerojudge/"/>
+    
+    
+    <category term="資料結構" scheme="http://yoursite.com/tags/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/"/>
+    
+    <category term="Zerojudge" scheme="http://yoursite.com/tags/Zerojudge/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Zerojudge d713</title>
+    <link href="http://yoursite.com/2020/09/11/Zerojudge%20d713/"/>
+    <id>http://yoursite.com/2020/09/11/Zerojudge%20d713/</id>
+    <published>2020-09-11T11:53:24.000Z</published>
+    <updated>2020-09-12T13:06:41.030Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="Zerojudge" scheme="http://yoursite.com/categories/Zerojudge/"/>
+    
+    
+    <category term="資料結構" scheme="http://yoursite.com/tags/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/"/>
+    
+    <category term="Zerojudge" scheme="http://yoursite.com/tags/Zerojudge/"/>
+    
+  </entry>
+  
+</feed>
