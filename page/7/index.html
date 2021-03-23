@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.1">
@@ -87,11 +87,11 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="Koios1143的筆記" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Koios1143的筆記" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="headband"></div>
 
   <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -209,20 +209,20 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">157</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags">
           
-        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-count">36</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -278,7 +278,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/23/UVa116/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/23/TOJ468/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/rinko.jpg">
@@ -295,7 +295,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/23/UVa116/" class="post-title-link" itemprop="url">UVa116</a>
+            <a href="/2021/03/23/TOJ468/" class="post-title-link" itemprop="url">TOJ 468</a>
         </h2>
 
         <div class="post-meta-container">
@@ -305,23 +305,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2020-06-23 02:41:04" itemprop="dateCreated datePublished" datetime="2020-06-23T02:41:04+08:00">2020-06-23</time>
+      <time title="創建時間：2021-03-23 22:00:38 / 修改時間：23:53:40" itemprop="dateCreated datePublished" datetime="2021-03-23T22:00:38+08:00">2021-03-23</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-26 03:16:52" itemprop="dateModified" datetime="2020-06-26T03:16:52+08:00">2020-06-26</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/TOJ/" itemprop="url" rel="index"><span itemprop="name">TOJ</span></a>
         </span>
     </span>
 
@@ -335,11 +329,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa116"><a href="#UVa116" class="headerlink" title="UVa116"></a>UVa116</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?116" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?116</a></p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>實作dfs很簡單，但是需要能回朔解<br>這邊想到用陣列去記錄每個點要前往的x座標，而y座標固定是+1，故不紀錄<br>在更新Min_dis要特別注意維護x較小的要在前<br>並且當Min_dis已經為最小值時DFS可以直接return減少遞迴時間</p>
+          <h1 id="TOJ-468"><a href="#TOJ-468" class="headerlink" title="TOJ 468"></a>TOJ 468</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="https://toj.tfcis.org/oj/pro/468/" target="_blank" rel="noopener">https://toj.tfcis.org/oj/pro/468/</a></p>
+<p>輸入包含 $n$ 個元素的序列，接下來 $m$ 筆詢問</p>
+<p>每筆詢問包含兩個正整數 $p, q$，求在序列當中有多少百分比的元素介於 $p$ 至 $q$</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/23/UVa116/#more" rel="contents">
+              <a class="btn" href="/2021/03/23/TOJ468/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -365,7 +360,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/23/UVa11258/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/23/TOJ47/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/rinko.jpg">
@@ -382,7 +377,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/23/UVa11258/" class="post-title-link" itemprop="url">UVa11258</a>
+            <a href="/2021/03/23/TOJ47/" class="post-title-link" itemprop="url">TOJ 47</a>
         </h2>
 
         <div class="post-meta-container">
@@ -392,23 +387,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2020-06-23 02:41:04" itemprop="dateCreated datePublished" datetime="2020-06-23T02:41:04+08:00">2020-06-23</time>
+      <time title="創建時間：2021-03-23 22:00:38 / 修改時間：23:53:00" itemprop="dateCreated datePublished" datetime="2021-03-23T22:00:38+08:00">2021-03-23</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-26 03:16:32" itemprop="dateModified" datetime="2020-06-26T03:16:32+08:00">2020-06-26</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/TOJ/" itemprop="url" rel="index"><span itemprop="name">TOJ</span></a>
         </span>
     </span>
 
@@ -422,11 +411,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa11258"><a href="#UVa11258" class="headerlink" title="UVa11258"></a>UVa11258</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?11258" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?11258</a></p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>定義$DP[i][j]$為 $i$ ~ $j$ 的最佳解<br>設定轉移式 $DP[i][j] = max(DP[i][j], DP[i][k]+DP[k+1][j])$<br>其中， $k$ 符合 $i\leq k \leq j$<br>起初，我們可以假設$DP[i][j]$為 $i$ ~ $j$ 的數值<br>如果超過INT範圍則設定為0，也就是不會有這樣的可能<br>接下來針對每個$DP[i][j]$找最大值，答案即為$DP[0][s.size()-1]$</p>
+          <h1 id="TOJ-47"><a href="#TOJ-47" class="headerlink" title="TOJ 47"></a>TOJ 47</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="https://toj.tfcis.org/oj/pro/47/" target="_blank" rel="noopener">https://toj.tfcis.org/oj/pro/47/</a></p>
+<p>給一串長度為 $n$ 的序列，有 $m$ 筆詢問</p>
+<p>對於每一筆詢問</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/23/UVa11258/#more" rel="contents">
+              <a class="btn" href="/2021/03/23/TOJ47/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -452,7 +442,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/23/UVa10684/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/23/TOJ244/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/rinko.jpg">
@@ -469,7 +459,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/23/UVa10684/" class="post-title-link" itemprop="url">UVa10684</a>
+            <a href="/2021/03/23/TOJ244/" class="post-title-link" itemprop="url">TOJ 244</a>
         </h2>
 
         <div class="post-meta-container">
@@ -479,23 +469,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2020-06-23 02:41:04" itemprop="dateCreated datePublished" datetime="2020-06-23T02:41:04+08:00">2020-06-23</time>
+      <time title="創建時間：2021-03-23 22:00:38 / 修改時間：23:03:52" itemprop="dateCreated datePublished" datetime="2021-03-23T22:00:38+08:00">2021-03-23</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-29 19:43:46" itemprop="dateModified" datetime="2020-06-29T19:43:46+08:00">2020-06-29</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/TOJ/" itemprop="url" rel="index"><span itemprop="name">TOJ</span></a>
         </span>
     </span>
 
@@ -509,185 +493,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa10684"><a href="#UVa10684" class="headerlink" title="UVa10684"></a>UVa10684</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><h2 id="想法1"><a href="#想法1" class="headerlink" title="想法1"></a>想法1</h2><p>直觀的看，暴力去找起點跟終點 $i,j$<br>複雜度$O(N^2)$</p>
-<h3 id="Code1"><a href="#Code1" class="headerlink" title="Code1"></a>Code1</h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/23/UVa10684/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/UVa11084/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/rinko.jpg">
-      <meta itemprop="name" content="Koios1143">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Koios1143的筆記">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/17/UVa11084/" class="post-title-link" itemprop="url">UVa11084</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2020-06-17 02:41:04" itemprop="dateCreated datePublished" datetime="2020-06-17T02:41:04+08:00">2020-06-17</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-26 03:15:25" itemprop="dateModified" datetime="2020-06-26T03:15:25+08:00">2020-06-26</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa11084"><a href="#UVa11084" class="headerlink" title="UVa11084"></a>UVa11084</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?11084" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?11084</a></p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>先暴力枚舉出數字的排列組合<br>再個別轉換成數字比較是否可以整除</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/17/UVa11084/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/UVa10102/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/rinko.jpg">
-      <meta itemprop="name" content="Koios1143">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Koios1143的筆記">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/17/UVa10102/" class="post-title-link" itemprop="url">UVa10102</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2020-06-17 02:41:04" itemprop="dateCreated datePublished" datetime="2020-06-17T02:41:04+08:00">2020-06-17</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-26 03:17:13" itemprop="dateModified" datetime="2020-06-26T03:17:13+08:00">2020-06-26</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa10102"><a href="#UVa10102" class="headerlink" title="UVa10102"></a>UVa10102</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>針對每個起點(1)做BFS，找到最近的3得到距離，再從其中找最大值</p>
+          <h1 id="TOJ-244"><a href="#TOJ-244" class="headerlink" title="TOJ 244"></a>TOJ 244</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="https://toj.tfcis.org/oj/pro/244/" target="_blank" rel="noopener">https://toj.tfcis.org/oj/pro/244/</a></p>
+<p>將輸入的字串中小寫轉大寫，大寫轉小寫</p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/17/UVa10102/#more" rel="contents">
+              <a class="btn" href="/2021/03/23/TOJ244/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -713,7 +524,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/UVa10926/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/23/TOJ412/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/rinko.jpg">
@@ -730,7 +541,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/17/UVa10926/" class="post-title-link" itemprop="url">UVa10926</a>
+            <a href="/2021/03/23/TOJ412/" class="post-title-link" itemprop="url">TOJ 412</a>
         </h2>
 
         <div class="post-meta-container">
@@ -740,23 +551,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2020-06-17 02:41:04" itemprop="dateCreated datePublished" datetime="2020-06-17T02:41:04+08:00">2020-06-17</time>
+      <time title="創建時間：2021-03-23 22:00:38 / 修改時間：23:35:09" itemprop="dateCreated datePublished" datetime="2021-03-23T22:00:38+08:00">2021-03-23</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-26 03:16:12" itemprop="dateModified" datetime="2020-06-26T03:16:12+08:00">2020-06-26</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/TOJ/" itemprop="url" rel="index"><span itemprop="name">TOJ</span></a>
         </span>
     </span>
 
@@ -770,11 +575,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa10926"><a href="#UVa10926" class="headerlink" title="UVa10926"></a>UVa10926</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?10926" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?10926</a></p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>直接對於每個依賴遞迴下去，遇到相同的避掉</p>
+          <h1 id="UVa412"><a href="#UVa412" class="headerlink" title="UVa412"></a>UVa412</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?412" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?412</a></p>
+<p>給一個集合 $S$ ，從中任意取兩數 $p, q$</p>
+<p>其中該集合所有 $p, q$ 對數記作 $A$， $p, q$ 互質的數量記作 $B$</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/17/UVa10926/#more" rel="contents">
+              <a class="btn" href="/2021/03/23/TOJ412/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -800,7 +606,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/16/UVa11513/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/23/TOJ3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/rinko.jpg">
@@ -817,7 +623,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/16/UVa11513/" class="post-title-link" itemprop="url">UVa598</a>
+            <a href="/2021/03/23/TOJ3/" class="post-title-link" itemprop="url">TOJ 3</a>
         </h2>
 
         <div class="post-meta-container">
@@ -827,23 +633,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2020-06-16 19:02:04" itemprop="dateCreated datePublished" datetime="2020-06-16T19:02:04+08:00">2020-06-16</time>
+      <time title="創建時間：2021-03-23 22:00:38 / 修改時間：23:30:32" itemprop="dateCreated datePublished" datetime="2021-03-23T22:00:38+08:00">2021-03-23</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-30 19:16:57" itemprop="dateModified" datetime="2020-06-30T19:16:57+08:00">2020-06-30</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/TOJ/" itemprop="url" rel="index"><span itemprop="name">TOJ</span></a>
         </span>
     </span>
 
@@ -857,15 +657,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa11513"><a href="#UVa11513" class="headerlink" title="UVa11513"></a>UVa11513</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?11513" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?11513</a><br>給一個 $3\times3$ 的拼圖，其中合法的移動方式有</p>
-<ul>
-<li>選擇其中一行向上移動</li>
-<li>選擇其中一列向右移動</li>
-</ul>
-<p>問是否能透過以上操作回到原樣，若可以則輸出最小移動步數以及移動過程</p>
+          <h1 id="TOJ-3"><a href="#TOJ-3" class="headerlink" title="TOJ 3"></a>TOJ 3</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="https://toj.tfcis.org/oj/pro/3/" target="_blank" rel="noopener">https://toj.tfcis.org/oj/pro/3/</a></p>
+<p>有 $t$ 筆測資，每筆測資包含兩個數 $a, b$，求 $a, b$ 的最大公因數</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/16/UVa11513/#more" rel="contents">
+              <a class="btn" href="/2021/03/23/TOJ3/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -891,7 +688,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/16/UVa639/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/23/TOJ292/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/rinko.jpg">
@@ -908,7 +705,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/16/UVa639/" class="post-title-link" itemprop="url">UVa639</a>
+            <a href="/2021/03/23/TOJ292/" class="post-title-link" itemprop="url">TOJ 292</a>
         </h2>
 
         <div class="post-meta-container">
@@ -918,23 +715,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2020-06-16 17:16:04" itemprop="dateCreated datePublished" datetime="2020-06-16T17:16:04+08:00">2020-06-16</time>
+      <time title="創建時間：2021-03-23 22:00:38 / 修改時間：23:28:34" itemprop="dateCreated datePublished" datetime="2021-03-23T22:00:38+08:00">2021-03-23</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-30 19:16:25" itemprop="dateModified" datetime="2020-06-30T19:16:25+08:00">2020-06-30</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/TOJ/" itemprop="url" rel="index"><span itemprop="name">TOJ</span></a>
         </span>
     </span>
 
@@ -948,11 +739,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa639"><a href="#UVa639" class="headerlink" title="UVa639"></a>UVa639</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?639" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?639</a><br>給一個 $n \times n$ 的棋盤，其中<code>.</code>表示空格子，<code>X</code>表示障礙物<br>如同西洋棋中城堡的走法，求在互不影響下，能在棋盤中放入最多多少城堡且互不影響</p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>DFS走訪每個點，枚舉有放及沒放的結果，取最大值</p>
+          <h1 id="TOJ-292"><a href="#TOJ-292" class="headerlink" title="TOJ 292"></a>TOJ 292</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="https://toj.tfcis.org/oj/pro/292/" target="_blank" rel="noopener">https://toj.tfcis.org/oj/pro/292/</a></p>
+<p>給三個整數 $A, B, C$ ，表示 $C$ 當前為 $A$ 進位制，求轉換成 $B$ 進位制的樣子。其中，我們只會在 $2$~$10$ 進位制之間轉換</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/16/UVa639/#more" rel="contents">
+              <a class="btn" href="/2021/03/23/TOJ292/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -978,7 +770,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/16/UVa598/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/23/Kattis%20Oddities/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/rinko.jpg">
@@ -995,7 +787,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/16/UVa598/" class="post-title-link" itemprop="url">UVa598</a>
+            <a href="/2021/03/23/Kattis%20Oddities/" class="post-title-link" itemprop="url">Kattis - Oddities</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1005,23 +797,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2020-06-16 02:41:04" itemprop="dateCreated datePublished" datetime="2020-06-16T02:41:04+08:00">2020-06-16</time>
+      <time title="創建時間：2021-03-23 22:00:38 / 修改時間：22:33:22" itemprop="dateCreated datePublished" datetime="2021-03-23T22:00:38+08:00">2021-03-23</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-30 19:17:04" itemprop="dateModified" datetime="2020-06-30T19:17:04+08:00">2020-06-30</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/Kattis/" itemprop="url" rel="index"><span itemprop="name">Kattis</span></a>
         </span>
     </span>
 
@@ -1035,11 +821,258 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa598"><a href="#UVa598" class="headerlink" title="UVa598"></a>UVa598</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?598" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?598</a></p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>輸入比較麻煩，這邊用stringstream處理輸入<br>接下來做dfs暴力枚舉每個特定深度即可<br>要特別注意到的是，因為可以保證前面枚舉過的元素不會再出現<br>所以會枚舉到的只有當前點與其後的所有點<br>記錄前一次是取哪個點即可</p>
+          <h1 id="Kattis-Oddities"><a href="#Kattis-Oddities" class="headerlink" title="Kattis - Oddities"></a>Kattis - Oddities</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="https://hackmd.io/@sa072686/Kattis_oddities" target="_blank" rel="noopener">https://hackmd.io/@sa072686/Kattis_oddities</a></p>
+<p><a href="https://open.kattis.com/problems/oddities" target="_blank" rel="noopener">https://open.kattis.com/problems/oddities</a></p>
+<p>判斷 $n$ 是奇數或是偶數</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/16/UVa598/#more" rel="contents">
+              <a class="btn" href="/2021/03/23/Kattis%20Oddities/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/23/Kattis%20Quadrant%20Selection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/rinko.jpg">
+      <meta itemprop="name" content="Koios1143">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Koios1143的筆記">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/23/Kattis%20Quadrant%20Selection/" class="post-title-link" itemprop="url">Kattis - Quadrant Selection</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2021-03-23 22:00:38 / 修改時間：22:37:28" itemprop="dateCreated datePublished" datetime="2021-03-23T22:00:38+08:00">2021-03-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Kattis/" itemprop="url" rel="index"><span itemprop="name">Kattis</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Kattis-Quadrant-Selection"><a href="#Kattis-Quadrant-Selection" class="headerlink" title="Kattis - Quadrant Selection"></a>Kattis - Quadrant Selection</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="https://hackmd.io/@sa072686/Kattis_quadrant" target="_blank" rel="noopener">https://hackmd.io/@sa072686/Kattis_quadrant</a></p>
+<p><a href="https://open.kattis.com/problems/quadrant" target="_blank" rel="noopener">https://open.kattis.com/problems/quadrant</a></p>
+<p>輸入一個 $x, y$ 座標，輸出位在於第幾象限，保證 $x, y$ 不會有等於 0 的情況</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/23/Kattis%20Quadrant%20Selection/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/23/Kattis%20Conformity/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/rinko.jpg">
+      <meta itemprop="name" content="Koios1143">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Koios1143的筆記">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/23/Kattis%20Conformity/" class="post-title-link" itemprop="url">Kattis - Conformity</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2021-03-23 22:00:38 / 修改時間：23:44:41" itemprop="dateCreated datePublished" datetime="2021-03-23T22:00:38+08:00">2021-03-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Kattis/" itemprop="url" rel="index"><span itemprop="name">Kattis</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Kattis-Conformity-UVa-11286"><a href="#Kattis-Conformity-UVa-11286" class="headerlink" title="Kattis - Conformity (UVa 11286)"></a>Kattis - Conformity (UVa 11286)</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="https://open.kattis.com/problems/conformity" target="_blank" rel="noopener">https://open.kattis.com/problems/conformity</a></p>
+<p><a href="http://domen111.github.io/UVa-Easy-Viewer/?11286" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?11286</a></p>
+<p>在一間大學當中有 $n$ 個學生，每個學生都可以選擇 5 種課程，並且課程以介於 $100$ ~ $499$ 之間的數字表示</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/23/Kattis%20Conformity/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/23/Kattis%20Planting%20Trees/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/rinko.jpg">
+      <meta itemprop="name" content="Koios1143">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Koios1143的筆記">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/23/Kattis%20Planting%20Trees/" class="post-title-link" itemprop="url">Kattis - Planting Trees</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2021-03-23 22:00:38 / 修改時間：23:45:28" itemprop="dateCreated datePublished" datetime="2021-03-23T22:00:38+08:00">2021-03-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Kattis/" itemprop="url" rel="index"><span itemprop="name">Kattis</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Kattis-Planting-Trees"><a href="#Kattis-Planting-Trees" class="headerlink" title="Kattis - Planting Trees"></a>Kattis - Planting Trees</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="https://open.kattis.com/problems/plantingtrees" target="_blank" rel="noopener">https://open.kattis.com/problems/plantingtrees</a></p>
+<p>有一個園丁要種樹，每棵樹要花上一天的時間播種，並且因為園丁很懶惰，所以一天只會播種一棵樹的種子</p>
+<p>聰明的園丁已經知道每棵樹會花幾天成長完成，並且園丁可以自己選擇每顆樹種下的順序</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/23/Kattis%20Planting%20Trees/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -1064,7 +1097,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
   </nav>
 
 
@@ -1105,7 +1138,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1211,7 +1244,7 @@
     MathJax.texReset();
     MathJax.typeset();
   }
-</script>
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
     
 
