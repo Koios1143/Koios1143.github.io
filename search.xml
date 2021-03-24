@@ -3792,4 +3792,35 @@
         <tag>Binary Search</tag>
       </tags>
   </entry>
+  <entry>
+    <title>UVa 156</title>
+    <url>/2021/03/23/UVa156/</url>
+    <content><![CDATA[<h1 id="UVa-156"><a href="#UVa-156" class="headerlink" title="UVa 156"></a>UVa 156</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?156" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?156</a></p>
+<p>定義一個字串是 anagrams ，如果這個字串的任何排列方式除了本身以外都不是一個存在的單詞，我們就稱這個字串是 anagrams</p>
+<p>現在給你很多的字串，這些字串組成了字典，問在這本字典當中有哪些字串是 anagrams</p>
+<p>注意，在判斷 anagrams 時不需要理會大小寫</p>
+<p>但是輸出時需要理會大小寫，並且依照字典序排序</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>如果說字串 $A$ 經過排列後可以形成字串 $B$，那麼字串 $A, B$ 分別經過排序之後得到的 $A’, B’$ 也就會相等</p>
+<p>依照這樣的性質，我們建立一個新的結構(struct)，紀錄字典當中每個字轉成小寫並且經過排序後的樣子、以及原字串在字典當中的編號</p>
+<p>那麼這個新的結構所組成的新字串陣列在經過排序之後，根據上面所得到的性質我們會發現，那些排列後相同的字串都會被排在一起</p>
+<p>接下來我們只要篩掉這些字串，把剩餘的字串再透過編號對應回原本的字串，我們就拿到還沒排序過的答案了</p>
+<p>最後經過排序就是正解</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">words</span>&#123;</span></span><br><span class="line">	<span class="built_in">string</span> word;</span><br><span class="line">	<span class="keyword">int</span> id;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i=<span class="number">0</span>, l=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">string</span> input, dict[<span class="number">1005</span>], output[<span class="number">1005</span>];</span><br><span class="line">words word[<span class="number">1005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(words p, words q)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(p.word.compare(q.word)!=<span class="number">0</span>) <span class="keyword">return</span> p.word &lt; q.word;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;input &amp;&amp; input.compare(<span class="string">"#"</span>)!=<span class="number">0</span>)&#123;</span><br><span class="line">		<span class="comment">// 字典先存放一份原始檔</span></span><br><span class="line">		dict[i] = input;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 都先轉換成小寫</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span> ; j&lt;input.size() ; j++)&#123;</span><br><span class="line">			input[j] = <span class="built_in">tolower</span>(input[j]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 接者把字串排序好</span></span><br><span class="line">		sort(input.begin(), input.end());</span><br><span class="line">		<span class="comment">//放進新的結構當中</span></span><br><span class="line">		word[i].word = input;</span><br><span class="line">		word[i].id = i;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 把新的結構所形成的陣列排序</span></span><br><span class="line">	sort(word, word+i, cmp);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>, k ; j&lt;i ; )&#123;</span><br><span class="line">		<span class="keyword">for</span>(k=j ; k&lt;i ; k++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(word[j].word.compare(word[k].word)!= <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(k - j == <span class="number">1</span>)&#123;</span><br><span class="line">			<span class="comment">// 是 anagrams</span></span><br><span class="line">			output[l++] = dict[word[j].id];</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="comment">// 不是 anagrams</span></span><br><span class="line">			j = k;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 輸出結果要排序</span></span><br><span class="line">	sort(output, output+l);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span> ; j&lt;l ; j++)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;output[j]&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="時間複雜度分析"><a href="#時間複雜度分析" class="headerlink" title="時間複雜度分析"></a>時間複雜度分析</h2><p>輸入時間複雜度 $O(n)$，$1 \leq n \leq 1000$</p>
+<p>假設每個單詞的長度為 $s_i$， $S = \sum_{i = 0}^{n-1}s_i$</p>
+<p>建立新陣列的時間複雜度為 $O(S + \sum_{i = 0}^{n-1}s_ilog{s_i})$</p>
+<p>排序新陣列的時間複雜度為 $O(nlogn)$</p>
+<p>篩選的時間複雜度為 $O(n)$</p>
+<p>輸出結果排序時間複雜度約為 $O(nlogn)$</p>
+<p>輸出時間複雜度約為 $O(n)$</p>
+<p>總時間複雜度約為 $O(3n + nlogn + S + \sum_{i = 0}^{n-1}s_ilog{s_i})$</p>
+]]></content>
+      <categories>
+        <category>UVa</category>
+      </categories>
+      <tags>
+        <tag>UVa</tag>
+      </tags>
+  </entry>
 </search>
