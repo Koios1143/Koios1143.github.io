@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-03-23T14:56:34.093Z</updated>
+  <updated>2021-03-25T14:55:43.370Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,17 +17,79 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>TOJ 101</title>
-    <link href="http://yoursite.com/2021/03/23/TOJ101/"/>
-    <id>http://yoursite.com/2021/03/23/TOJ101/</id>
+    <title>UVa 468</title>
+    <link href="http://yoursite.com/2021/03/25/UVa468/"/>
+    <id>http://yoursite.com/2021/03/25/UVa468/</id>
+    <published>2021-03-25T14:00:38.000Z</published>
+    <updated>2021-03-25T14:55:43.370Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;UVa-468&quot;&gt;&lt;a href=&quot;#UVa-468&quot; class=&quot;headerlink&quot; title=&quot;UVa 468&quot;&gt;&lt;/a&gt;UVa 468&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?468&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?468&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我們今天設計了一個新的加密方式，首先是先寫下明文 $P$&lt;/p&gt;
+&lt;p&gt;接下來我們會分析 $P$ 當中每個字母出現的頻率&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="UVa" scheme="http://yoursite.com/categories/UVa/"/>
+    
+    
+    <category term="UVa" scheme="http://yoursite.com/tags/UVa/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UVa 11462</title>
+    <link href="http://yoursite.com/2021/03/25/UVa11462/"/>
+    <id>http://yoursite.com/2021/03/25/UVa11462/</id>
+    <published>2021-03-25T14:00:38.000Z</published>
+    <updated>2021-03-25T14:54:51.355Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;UVa-11462&quot;&gt;&lt;a href=&quot;#UVa-11462&quot; class=&quot;headerlink&quot; title=&quot;UVa 11462&quot;&gt;&lt;/a&gt;UVa 11462&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?11462&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?11462&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;有多筆測試資料，每筆測試資料第一行有一個正整數 $n$，接下來有 $n$ 個數字&lt;/p&gt;
+&lt;p&gt;這 $n$ 個數字保證都在 $1$ ~ $100$ 之間&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="UVa" scheme="http://yoursite.com/categories/UVa/"/>
+    
+    
+    <category term="UVa" scheme="http://yoursite.com/tags/UVa/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UVa 10041</title>
+    <link href="http://yoursite.com/2021/03/25/UVa10041/"/>
+    <id>http://yoursite.com/2021/03/25/UVa10041/</id>
+    <published>2021-03-25T14:00:38.000Z</published>
+    <updated>2021-03-25T14:56:13.870Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;UVa-10041&quot;&gt;&lt;a href=&quot;#UVa-10041&quot; class=&quot;headerlink&quot; title=&quot;UVa 10041&quot;&gt;&lt;/a&gt;UVa 10041&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?10041&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?10041&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;有一個人要搬家到某條路上，在這條路上有許多他的親戚，他希望新家能距離所有親戚最近&lt;/p&gt;
+&lt;p&gt;給每個親戚家所在的座標，問這新房子到其他親戚家距離總和是多少&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="UVa" scheme="http://yoursite.com/categories/UVa/"/>
+    
+    
+    <category term="UVa" scheme="http://yoursite.com/tags/UVa/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TOJ 103</title>
+    <link href="http://yoursite.com/2021/03/23/TOJ103/"/>
+    <id>http://yoursite.com/2021/03/23/TOJ103/</id>
     <published>2021-03-23T14:00:38.000Z</published>
-    <updated>2021-03-23T14:56:34.093Z</updated>
+    <updated>2021-03-23T14:54:36.470Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;TOJ-103&quot;&gt;&lt;a href=&quot;#TOJ-103&quot; class=&quot;headerlink&quot; title=&quot;TOJ 103&quot;&gt;&lt;/a&gt;TOJ 103&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://toj.tfcis.org/oj/pro/103/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://toj.tfcis.org/oj/pro/103/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;輸入兩個字串分別表示茶的種類以及甜度&lt;/p&gt;
+&lt;p&gt;如果種類和甜度都相同就輸出 GOOD&lt;/p&gt;</summary>
     
     
     
@@ -46,10 +108,9 @@
     <updated>2021-03-24T15:59:45.674Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;UVa-156&quot;&gt;&lt;a href=&quot;#UVa-156&quot; class=&quot;headerlink&quot; title=&quot;UVa 156&quot;&gt;&lt;/a&gt;UVa 156&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?156&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?156&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;定義一個字串是 anagrams ，如果這個字串的任何排列方式除了本身以外都不是一個存在的單詞，我們就稱這個字串是 anagrams&lt;/p&gt;
+&lt;p&gt;現在給你很多的字串，這些字串組成了字典，問在這本字典當中有哪些字串是 anagrams&lt;/p&gt;</summary>
     
     
     
@@ -68,10 +129,9 @@
     <updated>2021-03-24T14:31:58.675Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;TOJ-556&quot;&gt;&lt;a href=&quot;#TOJ-556&quot; class=&quot;headerlink&quot; title=&quot;TOJ 556&quot;&gt;&lt;/a&gt;TOJ 556&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://toj.tfcis.org/oj/pro/556/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://toj.tfcis.org/oj/pro/556/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;有 $N$ 項工作，為了好好管理進度，我們把每一份工作都分成了 $K$ 份&lt;/p&gt;
+&lt;p&gt;對於第 $i$ 項工作每天可以完成 $a_i$ 份，並且每天都會做每一項工作&lt;/p&gt;</summary>
     
     
     
@@ -92,10 +152,9 @@
     <updated>2021-03-23T14:49:36.870Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;UVa-591&quot;&gt;&lt;a href=&quot;#UVa-591&quot; class=&quot;headerlink&quot; title=&quot;UVa 591&quot;&gt;&lt;/a&gt;UVa 591&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?591&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?591&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;給一排疊得高高的積木群，現在我們要把他們得高度都變一樣，而每次我們可以將任意得一塊積木移動到另一排積木上&lt;/p&gt;
+&lt;p&gt;問最小移動次數，使得積木得高度能完全相同&lt;/p&gt;</summary>
     
     
     
@@ -114,10 +173,9 @@
     <updated>2021-03-23T15:05:30.242Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;UVa-458&quot;&gt;&lt;a href=&quot;#UVa-458&quot; class=&quot;headerlink&quot; title=&quot;UVa 458&quot;&gt;&lt;/a&gt;UVa 458&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?458&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?458&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;有一種特定加密方式&lt;/p&gt;
+&lt;p&gt;若 $K = 2$ 則 apple 經過加密後會變成 crrng&lt;/p&gt;</summary>
     
     
     
@@ -136,10 +194,9 @@
     <updated>2021-03-23T15:48:20.995Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;UVa-555&quot;&gt;&lt;a href=&quot;#UVa-555&quot; class=&quot;headerlink&quot; title=&quot;UVa 555&quot;&gt;&lt;/a&gt;UVa 555&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?555&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?555&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;現在我們要來玩一場橋牌，一場橋牌當中會有一個玩家負責發牌，並且我們會以方位(&lt;code&gt;N&lt;/code&gt;, &lt;code&gt;E&lt;/code&gt;, &lt;code&gt;S&lt;/code&gt;, &lt;code&gt;W&lt;/code&gt;)來稱呼玩家&lt;/p&gt;
+&lt;p&gt;發牌會從發牌者的左手邊開始，逆時針方向發牌，直到第 52 張牌被發到發牌玩家&lt;/p&gt;</summary>
     
     
     
@@ -158,10 +215,9 @@
     <updated>2021-03-23T14:29:32.660Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;TOJ-98&quot;&gt;&lt;a href=&quot;#TOJ-98&quot; class=&quot;headerlink&quot; title=&quot;TOJ 98&quot;&gt;&lt;/a&gt;TOJ 98&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://toj.tfcis.org/oj/pro/98/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://toj.tfcis.org/oj/pro/98/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;輸出 光秒, 光分, 光時, 光日, 光週, 光年 在公尺的單位下的數值&lt;/p&gt;
+&lt;h2 id=&quot;Code&quot;&gt;&lt;a href=&quot;#Code&quot; class=&quot;headerlink&quot; title=&quot;Code&quot;&gt;&lt;/a&gt;Code&lt;/h2&gt;</summary>
     
     
     
@@ -180,10 +236,9 @@
     <updated>2021-03-23T15:35:54.852Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;UVa12468&quot;&gt;&lt;a href=&quot;#UVa12468&quot; class=&quot;headerlink&quot; title=&quot;UVa12468&quot;&gt;&lt;/a&gt;UVa12468&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?12468&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?12468&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;有一台電視共有 $100$ 臺頻道，由 $0$~$99$，並且是環狀的，也就是說我可以從 $0$ 轉到第 $99$，反之亦同&lt;/p&gt;
+&lt;p&gt;現在要從頻道 $A$ 轉到頻道 $B$，每次只能轉一臺，正向或是逆向都可，求最少的轉移數&lt;/p&gt;</summary>
     
     
     
@@ -202,10 +257,9 @@
     <updated>2021-03-23T14:46:44.642Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;UVa-488&quot;&gt;&lt;a href=&quot;#UVa-488&quot; class=&quot;headerlink&quot; title=&quot;UVa 488&quot;&gt;&lt;/a&gt;UVa 488&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?488&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?488&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;輸入兩個整數 $a, f$ 表示三角形波的振幅以及頻率，請輸出該三角波&lt;/p&gt;
+&lt;h2 id=&quot;Code&quot;&gt;&lt;a href=&quot;#Code&quot; class=&quot;headerlink&quot; title=&quot;Code&quot;&gt;&lt;/a&gt;Code&lt;/h2&gt;</summary>
     
     
     
@@ -224,10 +278,9 @@
     <updated>2021-03-23T14:45:56.726Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;UVa-382&quot;&gt;&lt;a href=&quot;#UVa-382&quot; class=&quot;headerlink&quot; title=&quot;UVa 382&quot;&gt;&lt;/a&gt;UVa 382&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?382&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?382&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;給很多個數字 $n$ ，對於每個 $n$ ，求該數字的所有因數，不包含自己本身的總和&lt;/p&gt;
+&lt;p&gt;如果等於輸出 &lt;code&gt;PERFECT&lt;/code&gt; ，若小於輸出 &lt;code&gt;DEFICIENT&lt;/code&gt; ，若大於輸出 &lt;code&gt;ABUNDANT&lt;/code&gt;&lt;/p&gt;</summary>
     
     
     
@@ -246,10 +299,9 @@
     <updated>2021-03-23T15:20:40.179Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;UVa-12195&quot;&gt;&lt;a href=&quot;#UVa-12195&quot; class=&quot;headerlink&quot; title=&quot;UVa 12195&quot;&gt;&lt;/a&gt;UVa 12195&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?12195&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?12195&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;小李在學作曲，他想要做出每一小節長度都是 1 拍的曲子&lt;/p&gt;
+&lt;p&gt;可以用的音符有這些:&lt;/p&gt;</summary>
     
     
     
@@ -268,10 +320,9 @@
     <updated>2021-03-23T14:55:35.537Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;UVa-272&quot;&gt;&lt;a href=&quot;#UVa-272&quot; class=&quot;headerlink&quot; title=&quot;UVa 272&quot;&gt;&lt;/a&gt;UVa 272&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?272&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?272&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;給一篇文章，將每個 “” 對分別改寫成 `` 以及 ‘’&lt;/p&gt;
+&lt;h2 id=&quot;Code&quot;&gt;&lt;a href=&quot;#Code&quot; class=&quot;headerlink&quot; title=&quot;Code&quot;&gt;&lt;/a&gt;Code&lt;/h2&gt;</summary>
     
     
     
@@ -290,10 +341,12 @@
     <updated>2021-03-23T15:29:18.406Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;UVa-389&quot;&gt;&lt;a href=&quot;#UVa-389&quot; class=&quot;headerlink&quot; title=&quot;UVa 389&quot;&gt;&lt;/a&gt;UVa 389&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?389&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?389&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;給一個字串 $S$ 以及兩個數字 $n, m$ ，表示 $S$ 是 $n$ 進位底下的表示方式，求轉成 $m$ 進位制的樣子。&lt;/p&gt;
+&lt;h2 id=&quot;想法&quot;&gt;&lt;a href=&quot;#想法&quot; class=&quot;headerlink&quot; title=&quot;想法&quot;&gt;&lt;/a&gt;想法&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;先將 $S$ 想辦法換成我們熟悉的數字表示方式十進位&lt;/li&gt;
+&lt;li&gt;統一從十進位轉換為其他進位制&lt;/li&gt;
+&lt;/ol&gt;</summary>
     
     
     
@@ -312,10 +365,9 @@
     <updated>2021-03-23T15:08:25.458Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;UVa-11577&quot;&gt;&lt;a href=&quot;#UVa-11577&quot; class=&quot;headerlink&quot; title=&quot;UVa 11577&quot;&gt;&lt;/a&gt;UVa 11577&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?11577&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?11577&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;給一個字串，求字串中的所有英文字母轉成小寫後，出現次數最多的有哪些&lt;/p&gt;
+&lt;h2 id=&quot;想法&quot;&gt;&lt;a href=&quot;#想法&quot; class=&quot;headerlink&quot; title=&quot;想法&quot;&gt;&lt;/a&gt;想法&lt;/h2&gt;</summary>
     
     
     
@@ -334,10 +386,9 @@
     <updated>2021-03-23T15:07:53.180Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;UVa-11541&quot;&gt;&lt;a href=&quot;#UVa-11541&quot; class=&quot;headerlink&quot; title=&quot;UVa 11541&quot;&gt;&lt;/a&gt;UVa 11541&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?11541&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?11541&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;給一個字串，內容都會是一個字元 $C$ 接著一串數字 $N$ ，表示要輸出 $N$ 個 $C$&lt;/p&gt;
+&lt;p&gt;例如: &lt;code&gt;A2B3C1&lt;/code&gt; 表示 &lt;code&gt;AABBBC&lt;/code&gt;&lt;/p&gt;</summary>
     
     
     
@@ -356,10 +407,9 @@
     <updated>2021-03-23T15:39:02.544Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;UVa-11960&quot;&gt;&lt;a href=&quot;#UVa-11960&quot; class=&quot;headerlink&quot; title=&quot;UVa 11960&quot;&gt;&lt;/a&gt;UVa 11960&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?11960&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?11960&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;多筆測資，每筆測資包含一個正整數 $X$ ，求所有 $&amp;lt;=X$ 的正整數當中，因數個數最多的最大整數為何&lt;/p&gt;
+&lt;h2 id=&quot;想法&quot;&gt;&lt;a href=&quot;#想法&quot; class=&quot;headerlink&quot; title=&quot;想法&quot;&gt;&lt;/a&gt;想法&lt;/h2&gt;</summary>
     
     
     
@@ -378,76 +428,9 @@
     <updated>2021-03-23T15:22:35.756Z</updated>
     
     
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="UVa" scheme="http://yoursite.com/categories/UVa/"/>
-    
-    
-    <category term="UVa" scheme="http://yoursite.com/tags/UVa/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UVa 118</title>
-    <link href="http://yoursite.com/2021/03/23/UVa118/"/>
-    <id>http://yoursite.com/2021/03/23/UVa118/</id>
-    <published>2021-03-23T14:00:38.000Z</published>
-    <updated>2021-03-23T15:15:10.594Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="UVa" scheme="http://yoursite.com/categories/UVa/"/>
-    
-    
-    <category term="UVa" scheme="http://yoursite.com/tags/UVa/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UVa 11321</title>
-    <link href="http://yoursite.com/2021/03/23/UVa11321/"/>
-    <id>http://yoursite.com/2021/03/23/UVa11321/</id>
-    <published>2021-03-23T14:00:38.000Z</published>
-    <updated>2021-03-23T15:48:55.024Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="UVa" scheme="http://yoursite.com/categories/UVa/"/>
-    
-    
-    <category term="UVa" scheme="http://yoursite.com/tags/UVa/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UVa 11074</title>
-    <link href="http://yoursite.com/2021/03/23/UVa11074/"/>
-    <id>http://yoursite.com/2021/03/23/UVa11074/</id>
-    <published>2021-03-23T14:00:38.000Z</published>
-    <updated>2021-03-23T14:47:38.835Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
+    <summary type="html">&lt;h1 id=&quot;UVa-1185&quot;&gt;&lt;a href=&quot;#UVa-1185&quot; class=&quot;headerlink&quot; title=&quot;UVa 1185&quot;&gt;&lt;/a&gt;UVa 1185&lt;/h1&gt;&lt;h2 id=&quot;題目&quot;&gt;&lt;a href=&quot;#題目&quot; class=&quot;headerlink&quot; title=&quot;題目&quot;&gt;&lt;/a&gt;題目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://domen111.github.io/UVa-Easy-Viewer/?1185&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://domen111.github.io/UVa-Easy-Viewer/?1185&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;有 $n$ 筆測資，每筆測資包含一個數字 $m$ ，求 $m!$ 是幾位數&lt;/p&gt;
+&lt;h2 id=&quot;想法&quot;&gt;&lt;a href=&quot;#想法&quot; class=&quot;headerlink&quot; title=&quot;想法&quot;&gt;&lt;/a&gt;想法&lt;/h2&gt;</summary>
     
     
     

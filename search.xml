@@ -3823,4 +3823,85 @@
         <tag>UVa</tag>
       </tags>
   </entry>
+  <entry>
+    <title>UVa 10041</title>
+    <url>/2021/03/25/UVa10041/</url>
+    <content><![CDATA[<h1 id="UVa-10041"><a href="#UVa-10041" class="headerlink" title="UVa 10041"></a>UVa 10041</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?10041" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?10041</a></p>
+<p>有一個人要搬家到某條路上，在這條路上有許多他的親戚，他希望新家能距離所有親戚最近</p>
+<p>給每個親戚家所在的座標，問這新房子到其他親戚家距離總和是多少</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>首先我們要找到新家的位置，既然要距離所有親戚最近，那就是最中間的位置了(中位數)</p>
+<p>要計算中位數，就必須先找到中間項，那麼就先將序列排序吧!如此一來就可以很快找到中間項</p>
+<p>找到了新家的座標之後，接下來就計算到每個親戚家的距離總和即可</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n, m, mid, ans, arr[<span class="number">505</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">while</span>(n--)&#123;</span><br><span class="line">		ans=<span class="number">0</span>;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;m;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;m ; i++)&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;arr[i];</span><br><span class="line">		&#125;</span><br><span class="line">		sort(arr, arr+m);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 先找中間項</span></span><br><span class="line">		<span class="keyword">if</span>(m%<span class="number">2</span> == <span class="number">0</span>) mid = (arr[m/<span class="number">2</span>] + arr[m/<span class="number">2</span><span class="number">-1</span>])/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">else</span> mid = arr[m/<span class="number">2</span>];</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 計算距離總和</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;m ; i++)&#123;</span><br><span class="line">			ans += <span class="built_in">abs</span>(mid - arr[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="時間複雜度分析"><a href="#時間複雜度分析" class="headerlink" title="時間複雜度分析"></a>時間複雜度分析</h2><p>每筆測資輸入時間複雜度為 $O(m)$</p>
+<p>每筆測資排序時間複雜度為 $O(mlogm)$</p>
+<p>每筆測資計算距離總和時間複雜度為 $O(m)$</p>
+<p>每筆測資總時間複雜度約為 $O(2m + mlogm)$</p>
+]]></content>
+      <categories>
+        <category>UVa</category>
+      </categories>
+      <tags>
+        <tag>UVa</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>UVa 11462</title>
+    <url>/2021/03/25/UVa11462/</url>
+    <content><![CDATA[<h1 id="UVa-11462"><a href="#UVa-11462" class="headerlink" title="UVa 11462"></a>UVa 11462</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?11462" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?11462</a></p>
+<p>有多筆測試資料，每筆測試資料第一行有一個正整數 $n$，接下來有 $n$ 個數字</p>
+<p>這 $n$ 個數字保證都在 $1$ ~ $100$ 之間</p>
+<p>請將這些數字排序後輸出</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>最單純的想法就是直接排序後輸出</p>
+<p>可以直接使用 C++ STL sort</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n, arr[<span class="number">2000010</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n &amp;&amp; n)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;n ; i++)&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;arr[i];</span><br><span class="line">		&#125;</span><br><span class="line">		sort(arr, arr+n);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;n ; i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(i) <span class="built_in">cout</span>&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;arr[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="時間複雜度分析"><a href="#時間複雜度分析" class="headerlink" title="時間複雜度分析"></a>時間複雜度分析</h2><p>輸入時間複雜度為 $O(n)$</p>
+<p>排序時間複雜度為 $O(nlogn)$</p>
+<p>輸出時間複雜度為 $O(n)$</p>
+<p>總時間複雜度約為 $O(2n + nlogn)$</p>
+<h2 id="想法-2"><a href="#想法-2" class="headerlink" title="想法 2"></a>想法 2</h2><p>因為已知數字的範圍，而且範圍不大</p>
+<p>我們可以直接使用陣列紀錄每個數字出現的次數，再統計過後輸出即可，甚至不需要排序</p>
+<h2 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n, arr[<span class="number">2000010</span>], age[<span class="number">110</span>];</span><br><span class="line"><span class="keyword">bool</span> out=<span class="literal">false</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n &amp;&amp; n)&#123;</span><br><span class="line">		<span class="comment">// 先初始化 age 陣列</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;=<span class="number">100</span> ; i++)&#123;</span><br><span class="line">			age[i]=<span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;n ; i++)&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;arr[i];</span><br><span class="line">			<span class="comment">// 統計</span></span><br><span class="line">			age[arr[i]]++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span> ; i&lt;=<span class="number">100</span> ; i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(age[i] &gt; <span class="number">0</span>)&#123;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span> ; j&lt;age[i] ; j++)&#123;</span><br><span class="line">					<span class="keyword">if</span>(out) <span class="built_in">cout</span>&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">					<span class="keyword">else</span> out=<span class="literal">true</span>;</span><br><span class="line">					<span class="built_in">cout</span>&lt;&lt;i;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="時間複雜度分析-1"><a href="#時間複雜度分析-1" class="headerlink" title="時間複雜度分析"></a>時間複雜度分析</h2><p>輸入時間複雜度為 $O(n)$</p>
+<p>統計時間複雜度為 $O(n)$</p>
+<p>輸出時間複雜度為 $O(n)$</p>
+<p>總時間複雜度約為 $O(3n)$</p>
+]]></content>
+      <categories>
+        <category>UVa</category>
+      </categories>
+      <tags>
+        <tag>UVa</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>UVa 468</title>
+    <url>/2021/03/25/UVa468/</url>
+    <content><![CDATA[<h1 id="UVa-468"><a href="#UVa-468" class="headerlink" title="UVa 468"></a>UVa 468</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?468" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?468</a></p>
+<p>我們今天設計了一個新的加密方式，首先是先寫下明文 $P$</p>
+<p>接下來我們會分析 $P$ 當中每個字母出現的頻率</p>
+<p>接下來建立一個對照的字串 $S$ ， $S$ 當中每個字都會對應到 $P$ 的某個相同出現頻率的字</p>
+<p>我們保證題目當中只會出現字母，並且每個字母的出現頻率都不相同</p>
+<p>如果給你 $S$ 以及加密後的密文 $C$，你可以找到 $P$ 嗎?</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>因為每個字母出現的頻率都是獨特的，所以我們可以先分別統計 $P$ 和 $S$ 的每個字母出現次數</p>
+<p>經過排序過後就可以很快對應出每個字母應該要對應到誰</p>
+<p>最後建立一個對照表，輸出對著這張表就可以了</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> Max = <span class="number">1e9</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">char</span> tbl[<span class="number">128</span>];</span><br><span class="line"><span class="keyword">bool</span> out=<span class="literal">false</span>;</span><br><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 利用 statistics 來進行次數統計</span></span><br><span class="line"><span class="comment">// 根據 cnt 來排序，也記錄下了統計的字母是誰</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">statistics</span>&#123;</span></span><br><span class="line">	<span class="keyword">char</span> alpha;</span><br><span class="line">	<span class="comment">// 用一個極大值，使得這些不存在的字元排序後都會在最後方</span></span><br><span class="line">	<span class="keyword">int</span> cnt=Max;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(statistics p, statistics q)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(p.cnt != q.cnt) <span class="keyword">return</span> p.cnt &lt; q.cnt;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">while</span>(n--)&#123;</span><br><span class="line">		<span class="keyword">if</span>(out) <span class="built_in">cout</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">		<span class="keyword">else</span> out=<span class="literal">true</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 方便起見用 128</span></span><br><span class="line">		statistics text[<span class="number">128</span>], cipher[<span class="number">128</span>];</span><br><span class="line">		<span class="comment">// 只需要對 A~z 做初始化</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">65</span> ; i&lt;<span class="number">123</span> ; i++)&#123;</span><br><span class="line">			text[i].alpha = cipher[i].alpha = <span class="keyword">char</span>(i);</span><br><span class="line">			text[i].cnt = cipher[i].cnt = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;s.size() ; i++)&#123;</span><br><span class="line">			text[s[i]].cnt++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;s.size() ; i++)&#123;</span><br><span class="line">			cipher[s[i]].cnt++;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		sort(text, text+<span class="number">128</span>, cmp);</span><br><span class="line">		sort(cipher, cipher+<span class="number">128</span>, cmp);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; cipher[i].cnt!=Max ; i++)&#123;</span><br><span class="line">			<span class="comment">// 建立對照表</span></span><br><span class="line">			tbl[cipher[i].alpha] = text[i].alpha;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;s.size() ; i++)&#123;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;tbl[s[i]];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="時間複雜度分析"><a href="#時間複雜度分析" class="headerlink" title="時間複雜度分析"></a>時間複雜度分析</h2><p>每筆測資輸入時間複雜度為 $O(len(P) + len(C))$</p>
+<p>每筆測資統計時間複雜度為 $O(len(P) + len(C))$</p>
+<p>每筆測資排序時間複雜度為 $O(2mlogm)$ ，其中 $m = 128$</p>
+<p>每筆測資輸出時間複雜度為 $O(len(C))$</p>
+<p>總時間複雜度約為 $n(2(len(P) + len(C)) + 2mlogm + len(C))$</p>
+]]></content>
+      <categories>
+        <category>UVa</category>
+      </categories>
+      <tags>
+        <tag>UVa</tag>
+      </tags>
+  </entry>
 </search>
