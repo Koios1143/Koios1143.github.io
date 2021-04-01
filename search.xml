@@ -3904,4 +3904,101 @@
         <tag>UVa</tag>
       </tags>
   </entry>
+  <entry>
+    <title>TOJ 55</title>
+    <url>/2021/04/01/TOJ55/</url>
+    <content><![CDATA[<h1 id="TOJ-55"><a href="#TOJ-55" class="headerlink" title="TOJ 55"></a>TOJ 55</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="https://toj.tfcis.org/oj/pro/55/" target="_blank" rel="noopener">https://toj.tfcis.org/oj/pro/55/</a></p>
+<p>輸入 $n$ 個數字，接下來有 $m$ 筆詢問，想知道詢問的數字 $q$ 在序列當中出現的次數</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>直接計算 upper_bound ($&gt;q$ 的第一個位置) - lower_bound ($\leq q$ 的第一個位置)</p>
+<p>因為這一題的輸入數量有點大，需要加上輸入優化</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n, m, arr[<span class="number">1000010</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">// 輸入優化</span></span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	<span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;n ; i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;arr[i];</span><br><span class="line">	&#125;</span><br><span class="line">	sort(arr, arr+n);</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;m;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>, q ; i&lt;m ; i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;q;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;upper_bound(arr, arr+n, q) - lower_bound(arr, arr+n, q)&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="時間複雜度分析"><a href="#時間複雜度分析" class="headerlink" title="時間複雜度分析"></a>時間複雜度分析</h2><p>輸入時間複雜度為 $O(n)$</p>
+<p>排序時間複雜度為 $O(nlogn)$</p>
+<p>二分搜時間複雜度為 $O(logn)$</p>
+<p>總時間複雜度約為 $O(n + nlogn)$</p>
+]]></content>
+      <categories>
+        <category>TOJ</category>
+      </categories>
+      <tags>
+        <tag>TOJ</tag>
+        <tag>Binary Search</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>UVa 10282</title>
+    <url>/2021/04/01/UVa10282/</url>
+    <content><![CDATA[<h1 id="UVa-10282"><a href="#UVa-10282" class="headerlink" title="UVa 10282"></a>UVa 10282</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?10282" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?10282</a></p>
+<p>題目會先給你每個英文字對應到的外國文字，這群對應的字保證是一對一，形成一個字典</p>
+<p>接下來會有多筆詢問，輸入一個外國文字，輸出相對應的英文字，如果不存在則輸出 <code>eh</code></p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>這題可以直接用 map 對應，但是這裡我們用二分搜來實作看看</p>
+<p>首先先把字典建立好，可以用一個 struct 來建立每個英文字對應到的外國字，接下來排序，方便我們查詢</p>
+<p>最後用二分搜就可以了</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> i=<span class="number">0</span>, res, res2;</span><br><span class="line"><span class="built_in">string</span> s, key, value, q;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">word</span>&#123;</span></span><br><span class="line">	<span class="built_in">string</span> key;</span><br><span class="line">	<span class="built_in">string</span> value;</span><br><span class="line">&#125;;</span><br><span class="line">word dict[<span class="number">100010</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(word p, word q)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(p.value != q.value) <span class="keyword">return</span> p.value &lt; q.value;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="built_in">string</span> p)</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(l!=r)&#123;</span><br><span class="line">		<span class="keyword">int</span> mid = (l+r)/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(dict[mid].value == p) <span class="keyword">return</span> mid;</span><br><span class="line">		<span class="keyword">if</span>(dict[mid].value &lt; p) l = mid+<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">else</span> r=mid;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(getline(<span class="built_in">cin</span>, s) &amp;&amp; s!=<span class="string">""</span>)&#123;</span><br><span class="line">		<span class="comment">// 因為輸入是用換行間格，一次讀取一整行比較好判斷</span></span><br><span class="line">		<span class="comment">// 接下來用 stringstream 分割字串</span></span><br><span class="line">		<span class="built_in">stringstream</span> ss;</span><br><span class="line">		ss&lt;&lt;s;</span><br><span class="line">		ss&gt;&gt;key&gt;&gt;value;</span><br><span class="line">		dict[i].key = key;</span><br><span class="line">		dict[i].value = value;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	sort(&amp;dict[<span class="number">0</span>], &amp;dict[i], cmp);</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;q)&#123;</span><br><span class="line">		res = search(<span class="number">0</span>, i, q);</span><br><span class="line">		<span class="keyword">if</span>(res == <span class="number">-1</span>) <span class="built_in">cout</span>&lt;&lt;<span class="string">"eh\n"</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;dict[res].key&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="時間複雜度分析"><a href="#時間複雜度分析" class="headerlink" title="時間複雜度分析"></a>時間複雜度分析</h2><p>假設有 $N$ 筆輸入以及 $Q$ 筆詢問</p>
+<p>輸入時間複雜度為 $O(N)$</p>
+<p>排序時間複雜度為 $O(NlogN)$</p>
+<p>搜尋時間複雜度為 $O(QlogN)$</p>
+<p>總時間複雜度為 $O(N + (N+Q)logN)$</p>
+]]></content>
+      <categories>
+        <category>UVa</category>
+      </categories>
+      <tags>
+        <tag>UVa</tag>
+        <tag>Binary Search</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>UVa 10341</title>
+    <url>/2021/04/01/UVa10341/</url>
+    <content><![CDATA[<h1 id="UVa-10341"><a href="#UVa-10341" class="headerlink" title="UVa 10341"></a>UVa 10341</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?10341" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?10341</a></p>
+<p>今天有一個算式 $p * e^{-x} + q * sin(x) + r * cos(x) + s * tan(x) + t * x^{2} + u = 0$</p>
+<p>已知 $0 \leq x \leq 1$，給定 $p, q, r, s, t, u$，求 $x$</p>
+<p>$0 \leq p, r \leq 20 \<br>-20 \leq q, s, t \leq 0$</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>首先先來觀察一下算式，將算式中的每個部份拆分出來</p>
+<p>我們只討論 $x$ 所在的的範圍 $0 \leq x \leq 1$</p>
+<ul>
+<li>$e^{-x}$ 為遞減函數</li>
+<li>$sin(x)$ 為遞增函數</li>
+<li>$cos(x)$ 為遞減函數</li>
+<li>$tan(x)$ 為遞增函數</li>
+<li>$x^{2}$ 為遞增函數</li>
+</ul>
+<p>接下來把係數也考慮進去</p>
+<ul>
+<li>$p * e^{-x}$ 為遞減函數</li>
+<li>$q * sin(x)$ 為遞減函數</li>
+<li>$r * cos(x)$ 為遞減函數</li>
+<li>$s * tan(x)$ 為遞減函數</li>
+<li>$t * x^{2}$ 為遞減函數</li>
+</ul>
+<p>由此可知， $p * e^{-x} + q * sin(x) + r * cos(x) + s * tan(x) + t * x^{2} + u$ 是<strong>遞減函數</strong>，令這個函數為 $f(x)$</p>
+<p>知道這個函數是呈現遞減的狀態，我們要求其解就想到利用二分搜</p>
+<p>透過二分搜，我們可以枚舉 $x$，並且有三種情況</p>
+<ul>
+<li>$f(x) = 0$<br>  x 就是答案</li>
+<li>$f(x) &gt; 0$<br>  因為函數是遞減，當答案大於 0 則應該要調整邊界<strong>向右移動</strong></li>
+<li>$f(x) &lt; 0$<br>  因為函數是遞減，當答案大於 0 則應該要調整邊界<strong>向左移動</strong></li>
+</ul>
+<p>但是程式會有浮點數的誤差存在，所以很難判斷到底應不應該繼續往下尋找答案</p>
+<p>但是因為 $f(x)$ 是連續函數，我們可以用勘根定理找到是否存在解，只要除去不存在解的情況，我們就可以放心地往下繼續找答案</p>
+<p>除去無解的情況，接下來找答案就很快了</p>
+<p>但是浮點數誤差一定要小心處理</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">double</span> p, q, r, s, t, u, esp=<span class="number">1e-9</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">abs2</span><span class="params">(<span class="keyword">double</span> x)</span></span>&#123;</span><br><span class="line">	<span class="comment">// 因為沒有針對 double 的 abs 存在，自己寫一個</span></span><br><span class="line">	<span class="keyword">return</span> (x&lt;<span class="number">0</span> ? -x : x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">ans</span><span class="params">(<span class="keyword">double</span> x)</span></span>&#123;</span><br><span class="line">	<span class="comment">// 直接回傳 x 帶入算式的結果</span></span><br><span class="line">	<span class="keyword">return</span> p*<span class="built_in">exp</span>(-x) + q*<span class="built_in">sin</span>(x) + r*<span class="built_in">cos</span>(x) + s*<span class="built_in">tan</span>(x) + t*x*x + u;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">search</span><span class="params">(<span class="keyword">double</span> l, <span class="keyword">double</span> r)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> mid, ret=<span class="number">1</span>;</span><br><span class="line">	<span class="comment">// 只要答案還在誤差範圍內就放心搜尋</span></span><br><span class="line">	<span class="keyword">while</span>(abs2(ret) &gt; esp)&#123;</span><br><span class="line">		mid = (l+r)/<span class="number">2.0</span>;</span><br><span class="line">		ret = ans(mid);</span><br><span class="line">		<span class="keyword">if</span>(ret &lt; <span class="number">0</span>) r = mid;</span><br><span class="line">		<span class="keyword">else</span> l = mid;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> mid;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;p&gt;&gt;q&gt;&gt;r&gt;&gt;s&gt;&gt;t&gt;&gt;u)&#123;</span><br><span class="line">		<span class="comment">// 當左右邊界的值帶入後答案相乘大於 0 則不存在解 (勘根定理)</span></span><br><span class="line">		<span class="keyword">if</span>(ans(<span class="number">1</span>) * ans(<span class="number">0</span>) &gt; <span class="number">0</span>) <span class="built_in">cout</span>&lt;&lt;<span class="string">"No solution\n"</span>;</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">double</span> x = search(<span class="number">0</span>, <span class="number">1</span>+esp);</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;fixed&lt;&lt;setprecision(<span class="number">4</span>)&lt;&lt;x&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="時間複雜度分析"><a href="#時間複雜度分析" class="headerlink" title="時間複雜度分析"></a>時間複雜度分析</h2><p>每筆測資輸入時間複雜度為 $O(1)$</p>
+<p>每筆測資找答案的時間複雜度為 $O(logN)$ $N = 10^{9}$</p>
+<p>每筆測資總時間複雜度約為 $O(logN)$</p>
+]]></content>
+      <categories>
+        <category>UVa</category>
+      </categories>
+      <tags>
+        <tag>UVa</tag>
+        <tag>Binary Search</tag>
+      </tags>
+  </entry>
 </search>
