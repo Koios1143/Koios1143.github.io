@@ -22,24 +22,22 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="UVa 124題目http:&#x2F;&#x2F;domen111.github.io&#x2F;UVa-Easy-Viewer&#x2F;?124 給你幾個不重複的小寫英文字母，告訴你某些字母之間的大小關係，把所有從小到大的排列列出來 如果沒有告知某個元素的大小關係，那可以任意擺放">
+  <meta name="description" content="title: UVa 124date: 2021-04-27 14:00:38categories:  UVamathjax: truetags:  UVa DFS   UVa 124">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UVa 124">
-<meta property="og:url" content="http://yoursite.com/2021/04/27/UVa124/index.html">
+<meta property="og:title" content="UVa124">
+<meta property="og:url" content="http://yoursite.com/2021/05/26/UVa124/index.html">
 <meta property="og:site_name" content="Koios1143的筆記">
-<meta property="og:description" content="UVa 124題目http:&#x2F;&#x2F;domen111.github.io&#x2F;UVa-Easy-Viewer&#x2F;?124 給你幾個不重複的小寫英文字母，告訴你某些字母之間的大小關係，把所有從小到大的排列列出來 如果沒有告知某個元素的大小關係，那可以任意擺放">
+<meta property="og:description" content="title: UVa 124date: 2021-04-27 14:00:38categories:  UVamathjax: truetags:  UVa DFS   UVa 124">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://i.imgur.com/jxqzSfj.png">
-<meta property="article:published_time" content="2021-04-27T06:00:38.000Z">
-<meta property="article:modified_time" content="2021-04-27T03:30:19.810Z">
+<meta property="article:published_time" content="2021-05-25T23:28:37.630Z">
+<meta property="article:modified_time" content="2021-05-25T23:28:37.630Z">
 <meta property="article:author" content="Koios1143">
-<meta property="article:tag" content="DFS">
-<meta property="article:tag" content="UVa">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.imgur.com/jxqzSfj.png">
 
 
-<link rel="canonical" href="http://yoursite.com/2021/04/27/UVa124/">
+<link rel="canonical" href="http://yoursite.com/2021/05/26/UVa124/">
 
 
 <script class="page-configurations">
@@ -52,7 +50,7 @@
   };
 </script>
 
-  <title>UVa 124 | Koios1143的筆記</title>
+  <title>UVa124 | Koios1143的筆記</title>
   
 
 
@@ -93,9 +91,9 @@
   .search-pop-overlay, .sidebar-nav { display: none; }
   .sidebar-panel { display: block; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<link rel="alternate" href="/atom.xml" title="Koios1143的筆記" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="Koios1143的筆記" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -203,7 +201,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UVa-124"><span class="nav-number">1.</span> <span class="nav-text">UVa 124</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#題目"><span class="nav-number">1.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#想法1"><span class="nav-number">1.2.</span> <span class="nav-text">想法1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">1.2.1.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#想法2"><span class="nav-number">1.3.</span> <span class="nav-text">想法2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">Code</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UVa-124"><span class="nav-number">1.</span> <span class="nav-text">UVa 124</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#題目"><span class="nav-number">1.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#想法1"><span class="nav-number">1.2.</span> <span class="nav-text">想法1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">1.2.1.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#想法2"><span class="nav-number">1.3.</span> <span class="nav-text">想法2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#想法3"><span class="nav-number">1.4.</span> <span class="nav-text">想法3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-2"><span class="nav-number">1.5.</span> <span class="nav-text">Code</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -218,7 +216,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">180</span>
+          <span class="site-state-item-count">203</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -231,7 +229,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags">
           
-        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-count">38</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -288,7 +286,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/27/UVa124/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/05/26/UVa124/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ginko.jpg">
@@ -304,7 +302,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          UVa 124
+          UVa124
         </h1>
 
         <div class="post-meta-container">
@@ -314,18 +312,8 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2021-04-27 14:00:38 / 修改時間：11:30:19" itemprop="dateCreated datePublished" datetime="2021-04-27T14:00:38+08:00">2021-04-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
-        </span>
+      <time title="創建時間：2021-05-26 07:28:37" itemprop="dateCreated datePublished" datetime="2021-05-26T07:28:37+08:00">2021-05-26</time>
     </span>
 
   
@@ -345,7 +333,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="UVa-124"><a href="#UVa-124" class="headerlink" title="UVa 124"></a>UVa 124</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?124" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?124</a></p>
+        <hr>
+<p>title: UVa 124<br>date: 2021-04-27 14:00:38<br>categories:</p>
+<ul>
+<li>UVa<br>mathjax: true<br>tags: </li>
+<li>UVa</li>
+<li>DFS</li>
+</ul>
+<hr>
+<h1 id="UVa-124"><a href="#UVa-124" class="headerlink" title="UVa 124"></a>UVa 124</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?124" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?124</a></p>
 <p>給你幾個不重複的小寫英文字母，告訴你某些字母之間的大小關係，把所有從小到大的排列列出來</p>
 <p>如果沒有告知某個元素的大小關係，那可以任意擺放</p>
 <h2 id="想法1"><a href="#想法1" class="headerlink" title="想法1"></a>想法1</h2><p>我們可以紀錄兩個元素之間的關係，兩兩元素間的關係可以分成 <code>a&lt;b</code> <code>a&gt;b</code> <code>未定義</code> 三種</p>
@@ -362,6 +358,13 @@
 <p>並且我們不會忽略那些未定義的點</p>
 <p>這個方法被稱為拓樸排序，也會用到 DFS 的概念</p>
 <h3 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">string</span> vars, cons;</span><br><span class="line"><span class="keyword">char</span> v, x, y, res[<span class="number">26</span>];</span><br><span class="line"><span class="keyword">bool</span> out=<span class="literal">false</span>, nxt[<span class="number">26</span>][<span class="number">26</span>];</span><br><span class="line"><span class="keyword">int</span> var_nums, tbl[<span class="number">26</span>], in[<span class="number">26</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(<span class="keyword">int</span> depth)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(depth == var_nums)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;depth ; i++)&#123;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;res[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;<span class="number">26</span> ; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(tbl[i] &amp;&amp; in[i]==<span class="number">0</span>)&#123;</span><br><span class="line">			res[depth] = i+<span class="string">'a'</span>;</span><br><span class="line">			<span class="comment">// 刪除當前以及下一層點的邊</span></span><br><span class="line">			<span class="comment">// 刪除當前是為了避免下次被重複枚舉</span></span><br><span class="line">			in[i]--;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span> ; j&lt;<span class="number">26</span> ; j++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(tbl[j] &amp;&amp; nxt[i][j])&#123;</span><br><span class="line">					in[j]--;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			DFS(depth+<span class="number">1</span>);</span><br><span class="line">			in[i]++;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span> ; j&lt;<span class="number">26</span> ; j++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(tbl[j] &amp;&amp; nxt[i][j])&#123;</span><br><span class="line">					in[j]++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(getline(<span class="built_in">cin</span>, vars))&#123;</span><br><span class="line">		<span class="keyword">if</span>(out) <span class="built_in">cout</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">		<span class="keyword">else</span> out=<span class="literal">true</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 初始化</span></span><br><span class="line">		var_nums=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;<span class="number">26</span> ; i++)&#123;</span><br><span class="line">			tbl[i] = in[i] = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span> ; j&lt;<span class="number">26</span> ; j++)&#123;</span><br><span class="line">				nxt[i][j] = <span class="literal">false</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="built_in">stringstream</span> ss;</span><br><span class="line">		ss&lt;&lt;vars;</span><br><span class="line">		<span class="keyword">while</span>(ss&gt;&gt;v)&#123;</span><br><span class="line">			tbl[v-<span class="string">'a'</span>]=<span class="number">1</span>;</span><br><span class="line">			var_nums++;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		getline(<span class="built_in">cin</span>, cons);</span><br><span class="line">		ss.str(<span class="string">""</span>);ss.clear();</span><br><span class="line">		ss&lt;&lt;cons;</span><br><span class="line">		<span class="keyword">while</span>(ss&gt;&gt;x&gt;&gt;y)&#123;</span><br><span class="line">			<span class="comment">// 連結到 y 的邊 +1</span></span><br><span class="line">			in[y-<span class="string">'a'</span>]++;</span><br><span class="line">			<span class="comment">// 記錄下邊是存在的</span></span><br><span class="line">			nxt[x-<span class="string">'a'</span>][y-<span class="string">'a'</span>] = <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		DFS(<span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="想法3"><a href="#想法3" class="headerlink" title="想法3"></a>想法3</h2><p>前面有用 DFS 以及 拓樸排序 的方式寫過這題，現在用位元運算的角度來看</p>
+<p>我們可以用數字的 bit 去紀錄字元 $a$ 是否小於字元 $b$</p>
+<p>例如說 $b &lt; a$ ，那麼就在記錄 $b$ 小於的數字 $m$ 中第 $0$ (<code>a</code>-<code>a</code> = 0) 個 bit 紀錄 $1$</p>
+<p>接下來當我們透過 DFS 枚舉的過程時，把當前有用到的字元都記錄在一個數字的相對應 bit 上</p>
+<p>要判斷某個字元能否放上去，就只需要判斷出現過的字元是否都符合小於的條件即可</p>
+<h2 id="Code-2"><a href="#Code-2" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"><span class="keyword">int</span> vars, var_num, Less[<span class="number">30</span>];</span><br><span class="line"><span class="keyword">char</span> x, y, res[<span class="number">30</span>];</span><br><span class="line"><span class="keyword">bool</span> out=<span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(<span class="keyword">int</span> depth, <span class="keyword">int</span> used)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(depth == var_num)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;var_num ; i++)&#123;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;res[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 枚舉 26 個字母</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>, now ; i&lt;<span class="number">26</span> ; i++)&#123;</span><br><span class="line">		now = (<span class="number">1</span>&lt;&lt;i);</span><br><span class="line">		<span class="comment">// 判斷</span></span><br><span class="line">		<span class="comment">// 1. 是否為變數表中的變數</span></span><br><span class="line">		<span class="comment">// 2. 過去是否用過</span></span><br><span class="line">		<span class="comment">// 3. 用過的變數是否都小於當前變數</span></span><br><span class="line">		<span class="keyword">if</span>((vars &amp; now) != <span class="number">0</span> &amp;&amp; (used &amp; now) == <span class="number">0</span> &amp;&amp; (Less[i] &amp; used) == <span class="number">0</span>)&#123;</span><br><span class="line">			res[depth] = <span class="string">'a'</span>+i;</span><br><span class="line">			<span class="comment">// 記得要把自己加進 used</span></span><br><span class="line">			DFS(depth+<span class="number">1</span>, used|now);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(getline(<span class="built_in">cin</span>, s))&#123;</span><br><span class="line">		<span class="keyword">if</span>(out) <span class="built_in">cout</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">		<span class="keyword">else</span> out=<span class="literal">true</span>;</span><br><span class="line">		</span><br><span class="line">		vars = var_num = <span class="number">0</span>;</span><br><span class="line">		<span class="comment">// 先將每個人的 less 初始化為 0</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;<span class="number">30</span> ; i++)&#123;</span><br><span class="line">			Less[i] = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">stringstream</span> ss;</span><br><span class="line">		ss&lt;&lt;s;</span><br><span class="line">		<span class="keyword">while</span>(ss&gt;&gt;x)&#123;</span><br><span class="line">			<span class="comment">// 紀錄該字元有出現</span></span><br><span class="line">			vars |= (<span class="number">1</span>&lt;&lt;(x-<span class="string">'a'</span>));</span><br><span class="line">			var_num++;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		getline(<span class="built_in">cin</span>, s);</span><br><span class="line">		ss.str(<span class="string">""</span>);</span><br><span class="line">		ss.clear();</span><br><span class="line">		ss&lt;&lt;s;</span><br><span class="line">		<span class="keyword">while</span>(ss&gt;&gt;x&gt;&gt;y)&#123;</span><br><span class="line">			<span class="comment">// 紀錄 y &lt; x</span></span><br><span class="line">			Less[x-<span class="string">'a'</span>] |= (<span class="number">1</span>&lt;&lt;(y-<span class="string">'a'</span>));</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		DFS(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -388,22 +391,18 @@
     </div>
   </div>
 
-          <div class="post-tags">
-              <a href="/tags/DFS/" rel="tag"># DFS</a>
-              <a href="/tags/UVa/" rel="tag"># UVa</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/04/27/UVa216/" rel="prev" title="UVa 216">
-                  <i class="fa fa-chevron-left"></i> UVa 216
+                <a href="/2021/04/27/UVa200/" rel="prev" title="UVa 200">
+                  <i class="fa fa-chevron-left"></i> UVa 200
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/04/27/UVa598/" rel="next" title="UVa598">
-                  UVa598 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/05/26/TOJ4/" rel="next" title="TOJ 4">
+                  TOJ 4 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -575,7 +574,7 @@ NexT.utils.loadComments('#gitalk-container', () => {
       repo        : 'Koios1143.github.io',
       owner       : 'Koios1143',
       admin       : ['Koios1143'],
-      id          : 'a20fe621a38a6b1d08f8ace791e40aef',
+      id          : 'dc798d3935b01dcd1014157facb70e6e',
         language: 'zh-TW',
       distractionFreeMode: true
     });

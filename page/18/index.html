@@ -85,9 +85,9 @@
   .search-pop-overlay, .sidebar-nav { display: none; }
   .sidebar-panel { display: block; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<link rel="alternate" href="/atom.xml" title="Koios1143的筆記" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="Koios1143的筆記" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -209,7 +209,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">180</span>
+          <span class="site-state-item-count">203</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -222,7 +222,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags">
           
-        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-count">38</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -278,7 +278,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/25/UVa12455/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/29/Zerojudge%20c291/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ginko.jpg">
@@ -295,7 +295,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/25/UVa12455/" class="post-title-link" itemprop="url">UVa12455</a>
+            <a href="/2020/06/29/Zerojudge%20c291/" class="post-title-link" itemprop="url">Zerojudge c291</a>
         </h2>
 
         <div class="post-meta-container">
@@ -305,23 +305,21 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2020-06-25 02:41:04" itemprop="dateCreated datePublished" datetime="2020-06-25T02:41:04+08:00">2020-06-25</time>
+      <time title="創建時間：2020-06-29 18:01:24 / 修改時間：19:45:43" itemprop="dateCreated datePublished" datetime="2020-06-29T18:01:24+08:00">2020-06-29</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-26 03:16:24" itemprop="dateModified" datetime="2020-06-26T03:16:24+08:00">2020-06-26</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/Zerojudge/" itemprop="url" rel="index"><span itemprop="name">Zerojudge</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index"><span itemprop="name">APCS</span></a>
         </span>
     </span>
 
@@ -335,11 +333,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa12455"><a href="#UVa12455" class="headerlink" title="UVa12455"></a>UVa12455</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?12455" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?12455</a></p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>對於每個長度的棍子都可以用其他棍子組合而成<br>定義 $DP[i]$ 表示可以組成長度i的棍子<br>則有 $DP[i] = DP[i-k] ,k \leq i$<br>對於每個棍子都看看能不能透過這個棍子與其他棍子的組合組成新的長度</p>
+          <h1 id="Zerojudge-c291"><a href="#Zerojudge-c291" class="headerlink" title="Zerojudge c291"></a>Zerojudge c291</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=c291" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=c291</a><br>給每個人跟誰屬於同一個群體，求總群體個數</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>將所有人的關係建成圖，DFS每個點即可</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/25/UVa12455/#more" rel="contents">
+              <a class="btn" href="/2020/06/29/Zerojudge%20c291/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -365,7 +363,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/24/UVa10702/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/29/Zerojudge%20c290/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ginko.jpg">
@@ -382,7 +380,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/24/UVa10702/" class="post-title-link" itemprop="url">UVa10702</a>
+            <a href="/2020/06/29/Zerojudge%20c290/" class="post-title-link" itemprop="url">Zerojudge c290</a>
         </h2>
 
         <div class="post-meta-container">
@@ -392,23 +390,21 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2020-06-24 00:48:00" itemprop="dateCreated datePublished" datetime="2020-06-24T00:48:00+08:00">2020-06-24</time>
+      <time title="創建時間：2020-06-29 17:50:24 / 修改時間：19:46:02" itemprop="dateCreated datePublished" datetime="2020-06-29T17:50:24+08:00">2020-06-29</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-26 03:16:36" itemprop="dateModified" datetime="2020-06-26T03:16:36+08:00">2020-06-26</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/Zerojudge/" itemprop="url" rel="index"><span itemprop="name">Zerojudge</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index"><span itemprop="name">APCS</span></a>
         </span>
     </span>
 
@@ -422,12 +418,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?10702" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?10702</a></p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>從 $i$ 走到 $j$ 可以先經過 $k$<br>定義 $DP[n][i][j]$ 表示從 $i$ 走$n$步到 $j$ 的最大價值<br>轉移式: $DP[n][i][j] = max(DP[n][i][j], DP[n-1][i][k] + DP[1][k][j])$<br>且 $DP[1][i][j] = arr[i][j] (i \neq j)$<br>要記得當$i=j$時要走一步是不可能的</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h2>
+          <h1 id="Zerojudge-c290"><a href="#Zerojudge-c290" class="headerlink" title="Zerojudge c290"></a>Zerojudge c290</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=c290" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=c290</a><br>給一個10位數，不超過1000位數，求奇數和與偶數位數合之差的絕對值</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>數字用字串儲存，接下來將奇數位數與偶數位數算出來即可</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/24/UVa10702/#more" rel="contents">
+              <a class="btn" href="/2020/06/29/Zerojudge%20c290/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -453,7 +448,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/23/UVa10684/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/29/Zerojudge%20e289/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ginko.jpg">
@@ -470,7 +465,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/23/UVa10684/" class="post-title-link" itemprop="url">UVa10684</a>
+            <a href="/2020/06/29/Zerojudge%20e289/" class="post-title-link" itemprop="url">Zerojudge e289</a>
         </h2>
 
         <div class="post-meta-container">
@@ -480,23 +475,21 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2020-06-23 02:41:04" itemprop="dateCreated datePublished" datetime="2020-06-23T02:41:04+08:00">2020-06-23</time>
+      <time title="創建時間：2020-06-29 00:19:19 / 修改時間：00:55:20" itemprop="dateCreated datePublished" datetime="2020-06-29T00:19:19+08:00">2020-06-29</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-29 19:43:46" itemprop="dateModified" datetime="2020-06-29T19:43:46+08:00">2020-06-29</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/Zerojudge/" itemprop="url" rel="index"><span itemprop="name">Zerojudge</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index"><span itemprop="name">APCS</span></a>
         </span>
     </span>
 
@@ -510,11 +503,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa10684"><a href="#UVa10684" class="headerlink" title="UVa10684"></a>UVa10684</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><h2 id="想法1"><a href="#想法1" class="headerlink" title="想法1"></a>想法1</h2><p>直觀的看，暴力去找起點跟終點 $i,j$<br>複雜度$O(N^2)$</p>
-<h3 id="Code1"><a href="#Code1" class="headerlink" title="Code1"></a>Code1</h3>
+          <h1 id="Zerojudge-e289"><a href="#Zerojudge-e289" class="headerlink" title="Zerojudge e289"></a>Zerojudge e289</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=e289" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=e289</a><br>定義一個字串是美麗的為長度 $m$ 且有 $m$ 種不同顏色存在<br>給一個字串及長度 $m$ ，求美麗的字串個數</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>題目中的輸入可到 $10^{150}$，所以選擇用字串儲存<br>可以先將字串 $0$ ~ $m-1$先塞入map，則後面每次只需</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/23/UVa10684/#more" rel="contents">
+              <a class="btn" href="/2020/06/29/Zerojudge%20e289/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -540,7 +533,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/23/UVa11258/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/28/Zerojudge%20e288/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ginko.jpg">
@@ -557,7 +550,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/23/UVa11258/" class="post-title-link" itemprop="url">UVa11258</a>
+            <a href="/2020/06/28/Zerojudge%20e288/" class="post-title-link" itemprop="url">Zerojudge e288</a>
         </h2>
 
         <div class="post-meta-container">
@@ -568,14 +561,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2020-06-23 02:41:04" itemprop="dateCreated datePublished" datetime="2020-06-23T02:41:04+08:00">2020-06-23</time>
+      <time title="創建時間：2020-06-28 23:36:24" itemprop="dateCreated datePublished" datetime="2020-06-28T23:36:24+08:00">2020-06-28</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-26 03:16:32" itemprop="dateModified" datetime="2020-06-26T03:16:32+08:00">2020-06-26</time>
+        <time title="修改時間：2020-06-29 00:56:03" itemprop="dateModified" datetime="2020-06-29T00:56:03+08:00">2020-06-29</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -583,7 +576,11 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/Zerojudge/" itemprop="url" rel="index"><span itemprop="name">Zerojudge</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index"><span itemprop="name">APCS</span></a>
         </span>
     </span>
 
@@ -597,11 +594,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa11258"><a href="#UVa11258" class="headerlink" title="UVa11258"></a>UVa11258</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?11258" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?11258</a></p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>定義$DP[i][j]$為 $i$ ~ $j$ 的最佳解<br>設定轉移式 $DP[i][j] = max(DP[i][j], DP[i][k]+DP[k+1][j])$<br>其中， $k$ 符合 $i\leq k \leq j$<br>起初，我們可以假設$DP[i][j]$為 $i$ ~ $j$ 的數值<br>如果超過INT範圍則設定為0，也就是不會有這樣的可能<br>接下來針對每個$DP[i][j]$找最大值，答案即為$DP[0][s.size()-1]$</p>
+          <h1 id="Zerojudge-e288"><a href="#Zerojudge-e288" class="headerlink" title="Zerojudge e288"></a>Zerojudge e288</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=e288" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=e288</a><br>定義兩字串互為CP必須符合</p>
+<ol>
+<li>無任何字母相同</li>
+<li>須包含所有範圍內的字母</li>
+</ol>
+<p>給 $n$ 個字串，求CP對數總和</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/23/UVa11258/#more" rel="contents">
+              <a class="btn" href="/2020/06/28/Zerojudge%20e288/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -627,7 +628,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/23/UVa116/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/28/Zerojudge%20e287/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ginko.jpg">
@@ -644,7 +645,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/23/UVa116/" class="post-title-link" itemprop="url">UVa116</a>
+            <a href="/2020/06/28/Zerojudge%20e287/" class="post-title-link" itemprop="url">Zerojudge e287</a>
         </h2>
 
         <div class="post-meta-container">
@@ -655,14 +656,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2020-06-23 02:41:04" itemprop="dateCreated datePublished" datetime="2020-06-23T02:41:04+08:00">2020-06-23</time>
+      <time title="創建時間：2020-06-28 21:55:24" itemprop="dateCreated datePublished" datetime="2020-06-28T21:55:24+08:00">2020-06-28</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-26 03:16:52" itemprop="dateModified" datetime="2020-06-26T03:16:52+08:00">2020-06-26</time>
+        <time title="修改時間：2020-06-29 00:56:37" itemprop="dateModified" datetime="2020-06-29T00:56:37+08:00">2020-06-29</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -670,7 +671,11 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/Zerojudge/" itemprop="url" rel="index"><span itemprop="name">Zerojudge</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index"><span itemprop="name">APCS</span></a>
         </span>
     </span>
 
@@ -684,11 +689,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa116"><a href="#UVa116" class="headerlink" title="UVa116"></a>UVa116</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?116" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?116</a></p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>實作dfs很簡單，但是需要能回朔解<br>這邊想到用陣列去記錄每個點要前往的x座標，而y座標固定是+1，故不紀錄<br>在更新Min_dis要特別注意維護x較小的要在前<br>並且當Min_dis已經為最小值時DFS可以直接return減少遞迴時間</p>
+          <h1 id="Zerojudge-e287"><a href="#Zerojudge-e287" class="headerlink" title="Zerojudge e287"></a>Zerojudge e287</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=e287" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=e287</a><br>給一張地圖，起點從權重最小的點開始，每次往四周沒走過且權重最小的點移動，求移動權重的總和</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>用DFS照做即可</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/23/UVa116/#more" rel="contents">
+              <a class="btn" href="/2020/06/28/Zerojudge%20e287/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -714,7 +719,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/UVa10102/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/28/Zerojudge%20e286/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ginko.jpg">
@@ -731,7 +736,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/17/UVa10102/" class="post-title-link" itemprop="url">UVa10102</a>
+            <a href="/2020/06/28/Zerojudge%20e286/" class="post-title-link" itemprop="url">Zerojudge e286</a>
         </h2>
 
         <div class="post-meta-container">
@@ -742,14 +747,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2020-06-17 02:41:04" itemprop="dateCreated datePublished" datetime="2020-06-17T02:41:04+08:00">2020-06-17</time>
+      <time title="創建時間：2020-06-28 21:47:24" itemprop="dateCreated datePublished" datetime="2020-06-28T21:47:24+08:00">2020-06-28</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-26 03:17:13" itemprop="dateModified" datetime="2020-06-26T03:17:13+08:00">2020-06-26</time>
+        <time title="修改時間：2020-06-29 00:57:08" itemprop="dateModified" datetime="2020-06-29T00:57:08+08:00">2020-06-29</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -757,7 +762,11 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/Zerojudge/" itemprop="url" rel="index"><span itemprop="name">Zerojudge</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index"><span itemprop="name">APCS</span></a>
         </span>
     </span>
 
@@ -771,11 +780,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa10102"><a href="#UVa10102" class="headerlink" title="UVa10102"></a>UVa10102</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>針對每個起點(1)做BFS，找到最近的3得到距離，再從其中找最大值</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2>
+          <h1 id="Zerojudge-e286"><a href="#Zerojudge-e286" class="headerlink" title="Zerojudge e286"></a>Zerojudge e286</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=e286" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=e286</a><br>給兩場比賽中四局的兩隊比數，求輸贏與比分</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>跟著題目照做即可</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/17/UVa10102/#more" rel="contents">
+              <a class="btn" href="/2020/06/28/Zerojudge%20e286/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -801,7 +810,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/UVa10926/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/28/Zerojudge%20c471/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ginko.jpg">
@@ -818,7 +827,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/17/UVa10926/" class="post-title-link" itemprop="url">UVa10926</a>
+            <a href="/2020/06/28/Zerojudge%20c471/" class="post-title-link" itemprop="url">Zerojudge c471</a>
         </h2>
 
         <div class="post-meta-container">
@@ -829,14 +838,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2020-06-17 02:41:04" itemprop="dateCreated datePublished" datetime="2020-06-17T02:41:04+08:00">2020-06-17</time>
+      <time title="創建時間：2020-06-28 13:01:24" itemprop="dateCreated datePublished" datetime="2020-06-28T13:01:24+08:00">2020-06-28</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-26 03:16:12" itemprop="dateModified" datetime="2020-06-26T03:16:12+08:00">2020-06-26</time>
+        <time title="修改時間：2021-04-10 15:15:18" itemprop="dateModified" datetime="2021-04-10T15:15:18+08:00">2021-04-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -844,7 +853,11 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/Zerojudge/" itemprop="url" rel="index"><span itemprop="name">Zerojudge</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index"><span itemprop="name">APCS</span></a>
         </span>
     </span>
 
@@ -858,11 +871,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa10926"><a href="#UVa10926" class="headerlink" title="UVa10926"></a>UVa10926</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?10926" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?10926</a></p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>直接對於每個依賴遞迴下去，遇到相同的避掉</p>
+          <h1 id="Zerojudge-c471"><a href="#Zerojudge-c471" class="headerlink" title="Zerojudge c471"></a>Zerojudge c471</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=c471" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=c471</a><br>給定 $n$ 個物品的重量 $w_i$ 與拿取次數 $f_i$<br>定義拿取物品 $i$ 的花費是其 $f_i$ 乘上在其上方物品的重量總和<br>求最小的花費總和</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>對於兩個物品 $i$ $j$，只要 $w_i \times f_j &lt; w_j \times f_i$ ，就將 $i$ 放在 $j$ 前面<br>所以我們只要將所有物品以這種方式排序就會得到最佳的擺放方式<br>最後再計算總花費即可求解</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/17/UVa10926/#more" rel="contents">
+              <a class="btn" href="/2020/06/28/Zerojudge%20c471/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -888,7 +901,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/UVa11084/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/28/Zerojudge%20c463/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ginko.jpg">
@@ -905,7 +918,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/17/UVa11084/" class="post-title-link" itemprop="url">UVa11084</a>
+            <a href="/2020/06/28/Zerojudge%20c463/" class="post-title-link" itemprop="url">Zerojudge c463</a>
         </h2>
 
         <div class="post-meta-container">
@@ -915,23 +928,21 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2020-06-17 02:41:04" itemprop="dateCreated datePublished" datetime="2020-06-17T02:41:04+08:00">2020-06-17</time>
+      <time title="創建時間：2020-06-28 11:46:24 / 修改時間：16:48:52" itemprop="dateCreated datePublished" datetime="2020-06-28T11:46:24+08:00">2020-06-28</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-26 03:15:25" itemprop="dateModified" datetime="2020-06-26T03:15:25+08:00">2020-06-26</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/Zerojudge/" itemprop="url" rel="index"><span itemprop="name">Zerojudge</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index"><span itemprop="name">APCS</span></a>
         </span>
     </span>
 
@@ -945,11 +956,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa11084"><a href="#UVa11084" class="headerlink" title="UVa11084"></a>UVa11084</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?11084" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?11084</a></p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>先暴力枚舉出數字的排列組合<br>再個別轉換成數字比較是否可以整除</p>
+          <h1 id="Zerojudge-c463"><a href="#Zerojudge-c463" class="headerlink" title="Zerojudge c463"></a>Zerojudge c463</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=c463" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=c463</a><br>給一棵樹，求其根與高度和<br>高度定義為節點到距離最近的葉節點距離</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>找根可以利用根沒有父節點的特性，可以透過記錄每個點是否有父節點找到<br>找到根後就可以從根開始DFS，尋找各節點的高度並回傳，且葉節點高度為0</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/17/UVa11084/#more" rel="contents">
+              <a class="btn" href="/2020/06/28/Zerojudge%20c463/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -975,7 +986,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/16/UVa11513/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/28/Zerojudge%20c462/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ginko.jpg">
@@ -992,7 +1003,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/16/UVa11513/" class="post-title-link" itemprop="url">UVa598</a>
+            <a href="/2020/06/28/Zerojudge%20c462/" class="post-title-link" itemprop="url">Zerojudge c462</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1002,23 +1013,21 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2020-06-16 19:02:04" itemprop="dateCreated datePublished" datetime="2020-06-16T19:02:04+08:00">2020-06-16</time>
+      <time title="創建時間：2020-06-28 11:28:24 / 修改時間：16:49:01" itemprop="dateCreated datePublished" datetime="2020-06-28T11:28:24+08:00">2020-06-28</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-30 19:16:57" itemprop="dateModified" datetime="2020-06-30T19:16:57+08:00">2020-06-30</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/Zerojudge/" itemprop="url" rel="index"><span itemprop="name">Zerojudge</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index"><span itemprop="name">APCS</span></a>
         </span>
     </span>
 
@@ -1032,15 +1041,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa11513"><a href="#UVa11513" class="headerlink" title="UVa11513"></a>UVa11513</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?11513" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?11513</a><br>給一個 $3\times3$ 的拼圖，其中合法的移動方式有</p>
-<ul>
-<li>選擇其中一行向上移動</li>
-<li>選擇其中一列向右移動</li>
-</ul>
-<p>問是否能透過以上操作回到原樣，若可以則輸出最小移動步數以及移動過程</p>
+          <h1 id="Zerojudge-c462"><a href="#Zerojudge-c462" class="headerlink" title="Zerojudge c462"></a>Zerojudge c462</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=c462" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=c462</a><br>定義長度為 $k$ 的大寫字串與長度為 $k$ 的小寫字串串接而成的字串稱為 <code>k-交錯字串</code><br>給一個字串與 $k$ ，求最長的 <code>k-交錯字串</code> 長度</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>用一個陣列去記錄長度，分成幾種狀況討論</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/16/UVa11513/#more" rel="contents">
+              <a class="btn" href="/2020/06/28/Zerojudge%20c462/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -1066,7 +1071,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/16/UVa639/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/28/Zerojudge%20c461/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ginko.jpg">
@@ -1083,7 +1088,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/16/UVa639/" class="post-title-link" itemprop="url">UVa639</a>
+            <a href="/2020/06/28/Zerojudge%20c461/" class="post-title-link" itemprop="url">Zerojudge c461</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1093,23 +1098,21 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2020-06-16 17:16:04" itemprop="dateCreated datePublished" datetime="2020-06-16T17:16:04+08:00">2020-06-16</time>
+      <time title="創建時間：2020-06-28 11:03:24 / 修改時間：16:49:10" itemprop="dateCreated datePublished" datetime="2020-06-28T11:03:24+08:00">2020-06-28</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2020-06-30 19:16:25" itemprop="dateModified" datetime="2020-06-30T19:16:25+08:00">2020-06-30</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
+          <a href="/categories/Zerojudge/" itemprop="url" rel="index"><span itemprop="name">Zerojudge</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Zerojudge/APCS/" itemprop="url" rel="index"><span itemprop="name">APCS</span></a>
         </span>
     </span>
 
@@ -1123,11 +1126,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="UVa639"><a href="#UVa639" class="headerlink" title="UVa639"></a>UVa639</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?639" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?639</a><br>給一個 $n \times n$ 的棋盤，其中<code>.</code>表示空格子，<code>X</code>表示障礙物<br>如同西洋棋中城堡的走法，求在互不影響下，能在棋盤中放入最多多少城堡且互不影響</p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>DFS走訪每個點，枚舉有放及沒放的結果，取最大值</p>
+          <h1 id="Zerojudge-c461"><a href="#Zerojudge-c461" class="headerlink" title="Zerojudge c461"></a>Zerojudge c461</h1><h2 id="題敘"><a href="#題敘" class="headerlink" title="題敘"></a>題敘</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=c461" target="_blank" rel="noopener">https://zerojudge.tw/ShowProblem?problemid=c461</a><br>給三個數值，問經過 <code>AND</code> <code>OR</code> <code>XOR</code> 之後的值是否與要求相同</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>直接照著題目做下去即可</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/16/UVa639/#more" rel="contents">
+              <a class="btn" href="/2020/06/28/Zerojudge%20c461/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -1152,7 +1155,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span>
+    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/19/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
   </nav>
 
 

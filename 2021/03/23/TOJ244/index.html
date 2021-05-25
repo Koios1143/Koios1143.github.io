@@ -30,7 +30,7 @@
 <meta property="og:description" content="TOJ 244題目https:&#x2F;&#x2F;toj.tfcis.org&#x2F;oj&#x2F;pro&#x2F;244&#x2F; 將輸入的字串中小寫轉大寫，大寫轉小寫 Code">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-03-23T14:00:38.000Z">
-<meta property="article:modified_time" content="2021-03-23T15:03:52.409Z">
+<meta property="article:modified_time" content="2021-05-25T23:20:36.474Z">
 <meta property="article:author" content="Koios1143">
 <meta property="article:tag" content="TOJ">
 <meta name="twitter:card" content="summary">
@@ -90,9 +90,9 @@
   .search-pop-overlay, .sidebar-nav { display: none; }
   .sidebar-panel { display: block; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<link rel="alternate" href="/atom.xml" title="Koios1143的筆記" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="Koios1143的筆記" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -200,7 +200,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TOJ-244"><span class="nav-number">1.</span> <span class="nav-text">TOJ 244</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#題目"><span class="nav-number">1.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">1.2.</span> <span class="nav-text">Code</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#複雜度分析"><span class="nav-number">1.2.1.</span> <span class="nav-text">複雜度分析</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TOJ-244"><span class="nav-number">1.</span> <span class="nav-text">TOJ 244</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#題目"><span class="nav-number">1.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">1.2.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#想法2"><span class="nav-number">1.3.</span> <span class="nav-text">想法2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-1"><span class="nav-number">1.4.</span> <span class="nav-text">Code</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#複雜度分析"><span class="nav-number">1.4.1.</span> <span class="nav-text">複雜度分析</span></a></li></ol></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -215,7 +215,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">180</span>
+          <span class="site-state-item-count">203</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -228,7 +228,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags">
           
-        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-count">38</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -311,10 +311,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2021-03-23 22:00:38 / 修改時間：23:03:52" itemprop="dateCreated datePublished" datetime="2021-03-23T22:00:38+08:00">2021-03-23</time>
+      <time title="創建時間：2021-03-23 22:00:38" itemprop="dateCreated datePublished" datetime="2021-03-23T22:00:38+08:00">2021-03-23</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-05-26 07:20:36" itemprop="dateModified" datetime="2021-05-26T07:20:36+08:00">2021-05-26</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -345,6 +351,11 @@
         <h1 id="TOJ-244"><a href="#TOJ-244" class="headerlink" title="TOJ 244"></a>TOJ 244</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="https://toj.tfcis.org/oj/pro/244/" target="_blank" rel="noopener">https://toj.tfcis.org/oj/pro/244/</a></p>
 <p>將輸入的字串中小寫轉大寫，大寫轉小寫</p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">string</span> s;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;s;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;s.size() ; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(s[i]&lt;=<span class="string">'Z'</span>)&#123;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;(<span class="keyword">char</span>)(s[i]-<span class="string">'A'</span>+<span class="string">'a'</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;(<span class="keyword">char</span>)(s[i]-<span class="string">'a'</span>+<span class="string">'A'</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="想法2"><a href="#想法2" class="headerlink" title="想法2"></a>想法2</h2><p>觀察一下 ASCII Table，會發現到 <code>a</code> 以及 <code>A</code> 之間剛好差了 $32$</p>
+<p>並且將其對應到的數字轉換成二進位後會發現到它們只在<strong>第五個 bit</strong>是不同的</p>
+<p>也就是說我們要做大小寫轉換，只需要反轉第五個 bit 即可</p>
+<h2 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> t, x = (<span class="number">1</span>&lt;&lt;<span class="number">5</span>);</span><br><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;t ; i++)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;(<span class="keyword">char</span>)((<span class="keyword">int</span>)s[i]^x);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="複雜度分析"><a href="#複雜度分析" class="headerlink" title="複雜度分析"></a>複雜度分析</h3><p>總時間複雜度為 $O(n)$</p>
 
@@ -382,13 +393,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/03/23/TOJ292/" rel="prev" title="TOJ 292">
-                  <i class="fa fa-chevron-left"></i> TOJ 292
+                <a href="/2021/03/23/UVa12468/" rel="prev" title="UVa 12468">
+                  <i class="fa fa-chevron-left"></i> UVa 12468
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/03/23/TOJ18/" rel="next" title="TOJ 18">
-                  TOJ 18 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/03/23/UVa11577/" rel="next" title="UVa 11577">
+                  UVa 11577 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

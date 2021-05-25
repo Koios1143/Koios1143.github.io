@@ -22,21 +22,22 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="UVa 516題目http:&#x2F;&#x2F;domen111.github.io&#x2F;UVa-Easy-Viewer&#x2F;?516 給一個數字 $X$ 質因數分解後式，求 $X-1$ 的質因數分解式 想法">
+  <meta name="description" content="UVa 12444題目http:&#x2F;&#x2F;domen111.github.io&#x2F;UVa-Easy-Viewer&#x2F;?12444 給你兩個正整數 $C, D$，其中 $C &#x3D; A \texttt{ &amp; } B \quad D &#x3D; A \texttt{ | } B$ 求兩個正整數 $A, B$ 符合以上條件，並且 $B-A$ 為最小， $A \leq B$">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TOJ 516">
-<meta property="og:url" content="http://yoursite.com/2021/03/23/TOJ516/index.html">
+<meta property="og:title" content="UVa 12444">
+<meta property="og:url" content="http://yoursite.com/2021/05/26/UVa12444/index.html">
 <meta property="og:site_name" content="Koios1143的筆記">
-<meta property="og:description" content="UVa 516題目http:&#x2F;&#x2F;domen111.github.io&#x2F;UVa-Easy-Viewer&#x2F;?516 給一個數字 $X$ 質因數分解後式，求 $X-1$ 的質因數分解式 想法">
+<meta property="og:description" content="UVa 12444題目http:&#x2F;&#x2F;domen111.github.io&#x2F;UVa-Easy-Viewer&#x2F;?12444 給你兩個正整數 $C, D$，其中 $C &#x3D; A \texttt{ &amp; } B \quad D &#x3D; A \texttt{ | } B$ 求兩個正整數 $A, B$ 符合以上條件，並且 $B-A$ 為最小， $A \leq B$">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2021-03-23T14:00:38.000Z">
-<meta property="article:modified_time" content="2021-03-23T15:37:13.337Z">
+<meta property="article:published_time" content="2021-05-26T00:00:38.000Z">
+<meta property="article:modified_time" content="2021-05-25T23:42:22.034Z">
 <meta property="article:author" content="Koios1143">
-<meta property="article:tag" content="TOJ">
+<meta property="article:tag" content="UVa">
+<meta property="article:tag" content="Bitwise Operation">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://yoursite.com/2021/03/23/TOJ516/">
+<link rel="canonical" href="http://yoursite.com/2021/05/26/UVa12444/">
 
 
 <script class="page-configurations">
@@ -49,7 +50,7 @@
   };
 </script>
 
-  <title>TOJ 516 | Koios1143的筆記</title>
+  <title>UVa 12444 | Koios1143的筆記</title>
   
 
 
@@ -90,9 +91,9 @@
   .search-pop-overlay, .sidebar-nav { display: none; }
   .sidebar-panel { display: block; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<link rel="alternate" href="/atom.xml" title="Koios1143的筆記" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="Koios1143的筆記" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -200,7 +201,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UVa-516"><span class="nav-number">1.</span> <span class="nav-text">UVa 516</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#題目"><span class="nav-number">1.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#想法"><span class="nav-number">1.2.</span> <span class="nav-text">想法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">1.3.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#複雜度分析"><span class="nav-number">1.4.</span> <span class="nav-text">複雜度分析</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UVa-12444"><span class="nav-number">1.</span> <span class="nav-text">UVa 12444</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#題目"><span class="nav-number">1.1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#想法"><span class="nav-number">1.2.</span> <span class="nav-text">想法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">1.3.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#時間複雜度分析"><span class="nav-number">1.4.</span> <span class="nav-text">時間複雜度分析</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -215,7 +216,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">180</span>
+          <span class="site-state-item-count">203</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -228,7 +229,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags">
           
-        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-count">38</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -285,7 +286,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/23/TOJ516/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/05/26/UVa12444/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ginko.jpg">
@@ -301,7 +302,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          TOJ 516
+          UVa 12444
         </h1>
 
         <div class="post-meta-container">
@@ -313,7 +314,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2021-03-23 22:00:38 / 修改時間：23:37:13" itemprop="dateCreated datePublished" datetime="2021-03-23T22:00:38+08:00">2021-03-23</time>
+      <time title="創建時間：2021-05-26 08:00:38 / 修改時間：07:42:22" itemprop="dateCreated datePublished" datetime="2021-05-26T08:00:38+08:00">2021-05-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -321,7 +322,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/TOJ/" itemprop="url" rel="index"><span itemprop="name">TOJ</span></a>
+          <a href="/categories/UVa/" itemprop="url" rel="index"><span itemprop="name">UVa</span></a>
         </span>
     </span>
 
@@ -342,20 +343,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="UVa-516"><a href="#UVa-516" class="headerlink" title="UVa 516"></a>UVa 516</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?516" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?516</a></p>
-<p>給一個數字 $X$ 質因數分解後式，求 $X-1$ 的質因數分解式</p>
-<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>可以利用 stringstream 讀取輸入，取得所有數值就可以拿到 $X$ 以及 $X’=X-1$</p>
-<p>至於質因數分解的部分，我們可以藉由質數篩的過程當中紀錄每個數字第一次是被誰篩掉(也就是最小因數)</p>
-<p>例如: <code>10 -&gt; 2</code> <code>9 -&gt; 3</code> <code>17 -&gt; 17</code></p>
-<p>如此一來，對於每個詢問 $X’$ 每次先找到最小因數 $p$ ，紀錄當前的值 $X’$ 可以被整除幾次，並且將 $X’$ 除以 $p$，直到 $X’$ 為 $1$ 的時候表示我們已經找完了</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MaxN = <span class="number">32768</span>;</span><br><span class="line"><span class="keyword">int</span> fact[MaxN], ans[MaxN][<span class="number">2</span>];</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"><span class="keyword">bool</span> fir;</span><br><span class="line"><span class="keyword">int</span> x,n,a,b,p,cnt,px;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">// 質數篩</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i=<span class="number">2</span> ; i&lt;=MaxN ; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(!fact[i])&#123;</span><br><span class="line">			fact[i]=i;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> j=i*i ; j&lt;=MaxN ; j+=i)&#123;</span><br><span class="line">				<span class="keyword">if</span>(!fact[j])&#123;</span><br><span class="line">					fact[j]=i;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span>(getline(<span class="built_in">cin</span>,s))&#123;</span><br><span class="line">		<span class="keyword">if</span>(s==<span class="string">"0"</span>) <span class="keyword">break</span>;</span><br><span class="line">		fir=<span class="literal">true</span>; n=<span class="number">1</span>; px=<span class="number">0</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 計算 X</span></span><br><span class="line">		<span class="built_in">stringstream</span> ss;</span><br><span class="line">		ss&lt;&lt;s;</span><br><span class="line">		<span class="keyword">while</span>(ss&gt;&gt;x)&#123;</span><br><span class="line">			<span class="keyword">if</span>(fir) a=x;</span><br><span class="line">			<span class="keyword">else</span>&#123;</span><br><span class="line">				b=x;</span><br><span class="line">				n*=<span class="built_in">pow</span>(a,b);	</span><br><span class="line">			&#125;</span><br><span class="line">			fir=!fir;</span><br><span class="line">		&#125;</span><br><span class="line">		n--;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 質因數分解</span></span><br><span class="line">		<span class="keyword">while</span>(n!=<span class="number">1</span>)&#123;</span><br><span class="line">			p=fact[n];</span><br><span class="line">			cnt=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">while</span>(n%p==<span class="number">0</span>)&#123;</span><br><span class="line">				cnt++;</span><br><span class="line">				n/=p;</span><br><span class="line">			&#125;</span><br><span class="line">			ans[px][<span class="number">0</span>]=p;</span><br><span class="line">			ans[px][<span class="number">1</span>]=cnt;</span><br><span class="line">			px++;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=px<span class="number">-1</span> ; i&gt;=<span class="number">0</span> ; i--)&#123;</span><br><span class="line">			<span class="keyword">if</span>(i!=px<span class="number">-1</span>) <span class="built_in">cout</span>&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;ans[i][<span class="number">0</span>]&lt;&lt;<span class="string">" "</span>&lt;&lt;ans[i][<span class="number">1</span>];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="UVa-12444"><a href="#UVa-12444" class="headerlink" title="UVa 12444"></a>UVa 12444</h1><h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p><a href="http://domen111.github.io/UVa-Easy-Viewer/?12444" target="_blank" rel="noopener">http://domen111.github.io/UVa-Easy-Viewer/?12444</a></p>
+<p>給你兩個正整數 $C, D$，其中 $C = A \texttt{ &amp; } B \quad D = A \texttt{ | } B$</p>
+<p>求兩個正整數 $A, B$ 符合以上條件，並且 $B-A$ 為最小， $A \leq B$</p>
+<p>如果沒有任何數字符合以上條件則輸出 $-1$</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>要找到兩個數字 $A, B$ 同時符合 $A \texttt{ &amp; }B = C$ 和 $A \texttt{ | } B = D$，那麼至少 $C$ 在二進為底下有 $1$ 的 bit 在 $D$ 上面也要有，所以如果不符合就保證無解</p>
+<p>接下來要找到使得 $B-A$ 為最小，那麼我們可以這樣想</p>
+<p>比較高位的 bit 必定會比所有比他低位的還大，例如說 $100_{(2)}$ 必定大於 $011_{(2)}$</p>
+<p>所以我們只要把最高位的給 $B$，剩下的都給 $A$，那麼兩個一定會是最接近的，也符合 $A \leq B$ 的條件</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//By Koios1143</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> T, C, D, A, B, tmp, highest;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;T;</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;C&gt;&gt;D;</span><br><span class="line">		<span class="comment">// 先判斷不符合條件的</span></span><br><span class="line">		<span class="keyword">if</span>((C&amp;D) != C)&#123;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">"-1\n"</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			A = B = C;</span><br><span class="line">			<span class="comment">// 透過 xor 可以找到哪些位置需要看</span></span><br><span class="line">			tmp = C^D;</span><br><span class="line">			<span class="comment">// 最高位的要給 B，可以用 log 取整得到</span></span><br><span class="line">			highest = log2(C^D);</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;=highest ; i++)&#123;</span><br><span class="line">				<span class="keyword">if</span>((tmp &amp; (<span class="number">1</span>&lt;&lt;i)) != <span class="number">0</span>)&#123;</span><br><span class="line">					<span class="keyword">if</span>(i == highest)&#123;</span><br><span class="line">						B |= (<span class="number">1</span>&lt;&lt;i);</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">else</span>&#123;</span><br><span class="line">						A |= (<span class="number">1</span>&lt;&lt;i);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;A&lt;&lt;<span class="string">" "</span>&lt;&lt;B&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="複雜度分析"><a href="#複雜度分析" class="headerlink" title="複雜度分析"></a>複雜度分析</h2><p>質數篩的複雜度為 $O(NloglogN)$</p>
-<p>每筆測資計算 $X$ 時間複雜度約為 $O(\Omega(X))$</p>
-<p>每筆測資質因數分解時間複雜度約為 $O(\Omega(X))$</p>
-<p>每筆測資輸出時間複雜度約為 $O(\Omega(X))$</p>
-<p>其中， $\Omega(X)$ 表示 $X$ 的不同質因數個數。$\Omega(X)$ 表示 $X$ 的質因數個數</p>
-<p>總時間複雜度約為 $O(NloglogN + 2\Omega(X) + \Omega(X))$</p>
+<h2 id="時間複雜度分析"><a href="#時間複雜度分析" class="headerlink" title="時間複雜度分析"></a>時間複雜度分析</h2><p>每筆測資輸入以及輸出時間複雜度均為 $O(1)$</p>
+<p>每筆測資找答案的時間複雜度為 $O(log_{2}{(C \oplus D)})$</p>
+<p>總時間複雜度為 $O(T(log_{2}{(C \oplus D)}))$</p>
 
     </div>
 
@@ -384,20 +384,21 @@
   </div>
 
           <div class="post-tags">
-              <a href="/tags/TOJ/" rel="tag"># TOJ</a>
+              <a href="/tags/UVa/" rel="tag"># UVa</a>
+              <a href="/tags/Bitwise-Operation/" rel="tag"># Bitwise Operation</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/03/23/TOJ523/" rel="prev" title="TOJ 523">
-                  <i class="fa fa-chevron-left"></i> TOJ 523
+                <a href="/2021/05/26/UVa11730/" rel="prev" title="UVa 11730">
+                  <i class="fa fa-chevron-left"></i> UVa 11730
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/03/23/Kattis%20Odd%20Man%20Out/" rel="next" title="Kattis - Odd Man Out">
-                  Kattis - Odd Man Out <i class="fa fa-chevron-right"></i>
+                <a href="/2021/05/26/UVa321/" rel="next" title="UVa 321">
+                  UVa 321 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -569,7 +570,7 @@ NexT.utils.loadComments('#gitalk-container', () => {
       repo        : 'Koios1143.github.io',
       owner       : 'Koios1143',
       admin       : ['Koios1143'],
-      id          : 'de1569811e06cdb250b4b29dcde20ebe',
+      id          : '2d2e621b0e3fb1c3b23d640c3125d090',
         language: 'zh-TW',
       distractionFreeMode: true
     });
